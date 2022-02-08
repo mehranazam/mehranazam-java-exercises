@@ -1,11 +1,4 @@
 public class Exercise25 {
-    public static void main(String[] args) {
-        String begin = "Hello everyone, ";
-        String middle = "I am ";
-        String end = "Pickle Rick.";
-
-        System.out.println(begin + middle + end);
-    }
 
     // Mad Libs: https://en.wikipedia.org/wiki/Mad_Libs
     // 1. Add a main method.

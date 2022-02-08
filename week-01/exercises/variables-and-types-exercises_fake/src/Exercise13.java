@@ -2,14 +2,8 @@ public class Exercise13 {
 
     public static void main(String[] args) {
 
-        int purchaseQuantity = 7;
+        int purchaseQuantity = 2;
         boolean hasCoupon = false;
-
-        boolean hasDiscount = purchaseQuantity >= 6 || hasCoupon;
-
-        System.out.println(hasDiscount);
-
-
 
         // 1. Declare a boolean variable hasDiscount.
         // 2. Use an expression with comparison operators to assign its value.
