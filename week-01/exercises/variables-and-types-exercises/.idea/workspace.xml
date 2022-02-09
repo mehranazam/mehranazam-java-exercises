@@ -2,34 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e020970f-5087-47be-a162-0e845dff0882" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise00a.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise00a.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise03.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise05.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise05.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise06.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise06.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise07.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise07.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise08.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise08.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise09.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise09.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise10.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise11.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise11.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise12.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise12.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise13.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise13.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Exercise15.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise15.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise16.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise16.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise17.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise17.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise18.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise18.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise19.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise19.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise20.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise20.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise21.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise21.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise22.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise22.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise23.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise23.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise24.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise24.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Exercise25.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise25.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/variables-and-types-exercises.iml" beforeDir="false" afterPath="$PROJECT_DIR$/variables-and-types-exercises.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,15 +36,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Application.Exercise25">
-    <configuration name="Exercise21" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise21" />
-      <module name="variables-and-types-exercises" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Exercise22" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise22" />
+    <configuration name="Exercise15" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise15" />
       <module name="variables-and-types-exercises" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -96,13 +64,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Exercise26" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise26" />
+      <module name="variables-and-types-exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Exercise25" />
+        <item itemvalue="Application.Exercise26" />
+        <item itemvalue="Application.Exercise15" />
         <item itemvalue="Application.Exercise24" />
         <item itemvalue="Application.Exercise23" />
-        <item itemvalue="Application.Exercise22" />
-        <item itemvalue="Application.Exercise21" />
       </list>
     </recent_temporary>
   </component>

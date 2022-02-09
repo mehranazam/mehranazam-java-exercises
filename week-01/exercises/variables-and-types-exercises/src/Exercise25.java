@@ -1,10 +1,21 @@
+import java.util.Scanner;
+
 public class Exercise25 {
     public static void main(String[] args) {
-        String begin = "Hello everyone, ";
-        String middle = "I am ";
-        String end = "Pickle Rick.";
 
-        System.out.println(begin + middle + end);
+
+        String name;
+
+       String begin = "Hello everyone, ";
+        String middle = "I am ";
+        String end = "Pickle ";
+
+        Scanner scn = new Scanner(System.in);
+        System.out.print("Please enter your name: ");
+        name = scn.nextLine();
+
+
+        System.out.println(begin + middle + end + name + ".");
     }
 
     // Mad Libs: https://en.wikipedia.org/wiki/Mad_Libs
