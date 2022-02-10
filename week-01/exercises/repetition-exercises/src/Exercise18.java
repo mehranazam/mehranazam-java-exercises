@@ -35,7 +35,7 @@ public class Exercise18 {
 
         if(start < end) {
             for (int i = start; i <= end; i++) {
-                    phrase.deleteCharAt(i);
+             //       phrase.deleteCharAt(i);
             }
         }else{
             System.out.println("Wrong!");

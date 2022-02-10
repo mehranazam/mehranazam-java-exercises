@@ -1,4 +1,29 @@
+import java.util.Scanner;
+
 public class Exercise12 {
+
+
+
+    public static String readRequiredString(String prompt){
+
+        String result = "";
+
+        Scanner scn = new Scanner(System.in);
+
+        do {
+            System.out.println(prompt);
+            result = scn.nextLine();
+        } while (result.isBlank());
+
+
+        return result;
+    }
+
+
+
+
+
+
 
     // 1. Create a method.
     // Name: readRequiredString
@@ -18,10 +43,27 @@ public class Exercise12 {
     // Internally, prompts a user for an adjective and a noun with readRequiredString.
     // Concatenates adjective and noun and prints it to the console.
 
+
+
+    public static void printNounPhrase(){
+
+        String adjective = readRequiredString("Please enter an adjective.");
+        String noun = readRequiredString("Please enter a noun.");
+
+        System.out.println(adjective + " " + noun);
+
+    }
+
+
+
+
+
     public static void main(String[] args) {
         // 3. Uncomment the code below and confirm it works.
-        // printNounPhrase();
-        // printNounPhrase();
-        // printNounPhrase();
+         printNounPhrase();
+         printNounPhrase();
+         printNounPhrase();
+
+
     }
 }

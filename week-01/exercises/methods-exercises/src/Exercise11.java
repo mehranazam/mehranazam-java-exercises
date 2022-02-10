@@ -8,9 +8,20 @@ public class Exercise11 {
 
         name = readString("What's your name?: ");
         // 2. Uncomment the line below and confirm readInt works.
-        // pillowCount = readInt("How many pillows do you sleep with?: ");
+        pillowCount = readInt("How many pillows do you sleep with?: ");
 
         System.out.printf("%s sleeps with %s pillows.%n", name, pillowCount);
+    }
+
+
+  public static int readInt(String prompt){
+       int userInt = Integer.MIN_VALUE;
+
+       String userString = readString(prompt);
+
+       userInt = Integer.parseInt(userString);
+
+       return userInt;
     }
 
     // 1. Create a method.

@@ -12,30 +12,43 @@ public class Exercise01 {
     }
 
     public static String getRandomCompliment() {
+        String result = "";
 
-        switch ((int) (Math.random() * 10)) {
+
+
+        switch ((int)(Math.random() * 10)) {
             case 0:
-                return "Your hard work is inspiring.";
+                result = "Your hard work is inspiring.";
+                break;
             case 1:
-                return "Your outfit is cute.";
+                result =  "Your outfit is cute.";
+                break;
             case 2:
-                return "You're a very nice person.";
+                result = "You're a very nice person.";
+                break;
             case 3:
-                return "Great attitude. Keep going!";
+                result = "Great attitude. Keep going!";
+                break;
             case 4:
-                return "You always know how to put a smile on my face.";
+                result = "You always know how to put a smile on my face.";
+                break;
             case 5:
-                return "Well done!";
+                result = "Well done!";
+                break;
             case 6:
-                return "Excellent job.";
+                result = "Excellent job.";
+                break;
             case 7:
-                return "Thank you for your kindness.";
+                result = "Thank you for your kindness.";
+                break;
             case 8:
-                return "Bravo.";
+                result = "Bravo.";
+                break;
             case 9:
-                return "Really, really great.";
+                result = "Really, really great.";
+                break;
         }
 
-        return ""; // Should never happen.
+        return result;
     }
 }

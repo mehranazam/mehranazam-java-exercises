@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cf5f28fb-4c51-4328-a64f-bf1057f3e064" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../decisions-exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../decisions-exercises/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/methods-exercises.iml" beforeDir="false" afterPath="$PROJECT_DIR$/methods-exercises.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise04.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise05.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise05.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise06.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise06.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise07.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise07.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise08.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise08.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise09.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise09.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise11.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise11.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise12.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise12.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise13.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise13.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise14.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise14.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise15.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise15.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/src/Exercise16.java" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/src/Exercise16.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/src/Exercise18.java" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/src/Exercise18.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/src/Exercise19.java" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/src/Exercise19.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="24vnmQKUev2kFgWBk1Vv8L1L9iW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager" selected="Application.Exercise08">
+    <configuration name="Exercise01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise01" />
+      <module name="methods-exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise08" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise08" />
+      <module name="methods-exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise12" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise12" />
+      <module name="methods-exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise13" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise13" />
+      <module name="methods-exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise14" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise14" />
+      <module name="methods-exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Exercise08" />
+        <item itemvalue="Application.Exercise01" />
+        <item itemvalue="Application.Exercise13" />
+        <item itemvalue="Application.Exercise14" />
+        <item itemvalue="Application.Exercise12" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cf5f28fb-4c51-4328-a64f-bf1057f3e064" name="Changes" comment="" />
+      <created>1644520087435</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644520087435</updated>
+    </task>
+    <servers />
+  </component>
+</project>

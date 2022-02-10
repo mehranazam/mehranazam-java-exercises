@@ -36,14 +36,17 @@ public class Exercise16 {
 
         System.out.println("(" + row + "x" + column + ")");
 
+        for(int s = 1; s <= column; s++){
+            System.out.print("*");
 
+        }
         for(int r = 0; r < row; r++){
             for(int c = 0; c < column - 1; c++){
-                if(r == 0 || r == row){
-                    System.out.print("*");
-                }else {
-                    System.out.print("#");
-                }
+//                if(r == 0 || r == row){
+//                    System.out.print("*");
+//                }else {
+                   System.out.print("#");
+//                }
             }
             if(r == row){
                 System.out.print("*");
