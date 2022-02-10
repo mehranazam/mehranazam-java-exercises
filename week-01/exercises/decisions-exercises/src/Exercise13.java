@@ -21,5 +21,13 @@ public class Exercise13 {
         //    ury     curry       no
         //    mer   Mercury       no (case sensitive)
         // 2. As a stretch goal, display the location (index) of needle in haystack.
+
+
+        if(haystack.contains(needle) == true){
+            System.out.println("The needle is in the haystack");
+            System.out.println("The haystack is " + haystack.indexOf(needle));
+        }else{
+            System.out.println("The needle is NOT in the haystack");
+        }
     }
 }

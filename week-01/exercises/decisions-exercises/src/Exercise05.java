@@ -9,9 +9,15 @@ public class Exercise05 {
         String secret = console.nextLine();
 
         // 1. Add decision statements so that:
-        // If the secret work is tahini, print the message:
+        // If the secret word is tahini, print the message:
         //   You're correct. The secret word is "tahini".
         // Otherwise, print:
         //   That's not quite right. Try again.
+
+        if(secret.equals("tahini")){
+            System.out.println("You're correct. The secret word is \"tahini\".");
+        }else{
+            System.out.println("That's not quite right. Try again.");
+        }
     }
 }

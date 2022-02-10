@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="934a8ad7-4278-4d04-9553-ddc8e86960aa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/decisions-exercises.iml" beforeDir="false" afterPath="$PROJECT_DIR$/decisions-exercises.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise04.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise05.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise05.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise06.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise06.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise07.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise07.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise08.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise08.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise11.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise11.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise12.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise12.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise13.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise13.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise14.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise14.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise15.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise15.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise16.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise16.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise17.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise17.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/repetition-exercises.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/repetition-exercises.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/src/Exercise01.java" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/src/Exercise01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/src/Exercise02.java" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/src/Exercise02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/src/Exercise03.java" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/src/Exercise03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/src/Exercise04.java" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/src/Exercise04.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/src/Exercise05.java" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/src/Exercise05.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/src/Exercise06.java" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/src/Exercise06.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/src/Exercise07.java" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/src/Exercise07.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/src/Exercise08.java" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/src/Exercise08.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/src/Exercise09.java" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/src/Exercise09.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/src/Exercise10.java" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/src/Exercise10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/src/Exercise12.java" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/src/Exercise12.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/src/Exercise13.java" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/src/Exercise13.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/src/Exercise14.java" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/src/Exercise14.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/src/Exercise15.java" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/src/Exercise15.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/src/Exercise16.java" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/src/Exercise16.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/src/Exercise18.java" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/src/Exercise18.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="24szFhh2LtnB9Y8X8ploTsSwGfz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager" selected="Application.Exercise17">
+    <configuration name="Exercise13" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise13" />
+      <module name="decisions-exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise14" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise14" />
+      <module name="decisions-exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise15" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise15" />
+      <module name="decisions-exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise16" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise16" />
+      <module name="decisions-exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise17" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise17" />
+      <module name="decisions-exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Maven.Unnamed" />
+      <item itemvalue="Application.Exercise13" />
+      <item itemvalue="Application.Exercise14" />
+      <item itemvalue="Application.Exercise15" />
+      <item itemvalue="Application.Exercise16" />
+      <item itemvalue="Application.Exercise17" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Exercise17" />
+        <item itemvalue="Application.Exercise16" />
+        <item itemvalue="Application.Exercise15" />
+        <item itemvalue="Application.Exercise14" />
+        <item itemvalue="Application.Exercise13" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="934a8ad7-4278-4d04-9553-ddc8e86960aa" name="Changes" comment="" />
+      <created>1644433980855</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644433980855</updated>
+    </task>
+    <servers />
+  </component>
+</project>

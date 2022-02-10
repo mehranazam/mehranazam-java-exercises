@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+
+
 public class Exercise18 {
 
     public static void main(String[] args) {
@@ -28,5 +30,18 @@ public class Exercise18 {
         // "orange", 15, 25 -> "orange" (ignore when start and end are bigger than the length of the phrase)
         // "one two three", 4, 7 -> "one three"
         // "interrupting moooo cow", 12, 17 -> "interrupting cow"
+
+        String result = "";
+
+        if(start < end) {
+            for (int i = start; i <= end; i++) {
+                    phrase.deleteCharAt(i);
+            }
+        }else{
+            System.out.println("Wrong!");
+        }
+        result = phrase;
+        System.out.println(result);
+
     }
 }

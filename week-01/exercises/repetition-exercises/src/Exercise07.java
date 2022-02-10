@@ -13,11 +13,14 @@ public class Exercise07 {
         // Hint: the Character.isWhitespace method may be useful.
         // https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Character.html#isWhitespace(char)
 
-        String result = "";
-        for (int i = 0; i < phrase.length(); i++) {
-            result += phrase.charAt(i);
-        }
-
-        System.out.println("Your phrase without whitespace is: " + result);
+//        String result = "";
+//        for (int i = 0; i < phrase.length(); i++) {
+//            if(phrase.isWhitespace) {
+//                result += phrase.charAt(i);
+//            }
+//        }
+//
+//        System.out.println("Your phrase without whitespace is: " + result);
+//    }
     }
 }

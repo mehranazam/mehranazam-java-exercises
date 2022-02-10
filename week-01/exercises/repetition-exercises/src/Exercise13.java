@@ -21,5 +21,7 @@ public class Exercise13 {
         // " " -> "  " (but whitespace should be doubled)
         // "open & shut" -> "ooppeenn  &&  sshhuutt"
         // "Eep" -> "EEeepp"
+
+
     }
 }

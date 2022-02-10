@@ -30,5 +30,12 @@ public class Exercise07 {
         // Hours of homework: 20
         // Day of week: Sunday
         // Time to do the homework...
+
+        if(dayOfWeek.charAt(0) == 'S' && hoursOfHomework < 15){
+            System.out.println("I'm taking the day off!");
+        } else if(dayOfWeek.charAt(0) != 'S' && hoursOfHomework > 15){
+            System.out.println("Time to do the homework...");
+        }
     }
-}
+    }
+

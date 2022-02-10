@@ -16,9 +16,20 @@ public class Exercise06 {
         System.out.print("# of Snorkelers: ");
         int snorkelerCount = Integer.parseInt(console.nextLine());
 
+
+
         System.out.print("# of Shoppers: ");
         int shopperCount = Integer.parseInt(console.nextLine());
 
         // 1. Apply if/else here.
+         if(snorkelerCount % 2 == 0){
+                System.out.println("Snorkelers: " + snorkelerCount);
+                System.out.println("Shoppers: " + shopperCount);
+                }else{
+                    shopperCount += snorkelerCount;
+                    snorkelerCount = 0;
+                     System.out.println("Snorkelers: " + snorkelerCount);
+                     System.out.println("Shoppers: " + shopperCount);
+                }
     }
 }

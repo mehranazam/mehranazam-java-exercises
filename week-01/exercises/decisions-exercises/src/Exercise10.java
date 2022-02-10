@@ -21,5 +21,49 @@ public class Exercise10 {
         // If a lbs/zone combo does not exist, print a warning message for the user.
 
         Scanner console = new Scanner(System.in);
+
+        System.out.println("How many pounds: ");
+        int weight = console.nextInt();
+
+        System.out.println("What zone: ");
+        int zone = console.nextInt();
+
+        switch(weight){
+            case 1:
+                if(zone == 1 || zone == 2) {
+                    System.out.println("7.50");
+                }else if(zone == 3){
+                    System.out.println("$7.85");
+                }
+                break;
+            case 2:
+                if(zone == 1 || zone == 2) {
+                    System.out.println("$8.25");
+                }else if(zone == 3){
+                    System.out.println("$8.70");
+                }
+                break;
+            case 3:
+                if(zone == 1 || zone == 2) {
+                    System.out.println("$8.70");
+                }else if(zone == 3){
+                    System.out.println("$9.70");
+                }
+                break;
+            case 4:
+                if(zone == 1 || zone == 2) {
+                    System.out.println("$9.20");
+                }else if(zone == 3){
+                    System.out.println("$10.55");
+                }
+                break;
+            case 5:
+                if(zone == 1 || zone == 2) {
+                    System.out.println("$10.20");
+                }else if(zone == 3){
+                    System.out.println("$11.30");
+                }
+                break;
+        }
     }
 }

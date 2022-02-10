@@ -20,5 +20,33 @@ public class Exercise17 {
         // You may choose to track data -- maybe a boolean for homework yes/no -- instead of printing a message in
         // each case. That's a lot of repeated typing.
         // Then print the detailed message after the switch.
+
+
+       switch(dayOfWeek) {
+           case 1:
+           case 2:
+           case 3:
+           case 4:
+           case 5:
+               if (hoursOfHomework > 15) {
+                   System.out.println("Time to do homework.");
+               }else{
+                   System.out.println("I can skip homework.");
+               }
+               break;
+           case 6:
+           case 7:
+               if(hoursOfHomework < 15){
+                   System.out.println("I can skip homework.");
+               }else{
+                   System.out.println("Time to do homework.");
+               }
+               break;
+           default:
+               System.out.println("Wrong message.");
+               break;
+
+
+       }
     }
-}
+  }
