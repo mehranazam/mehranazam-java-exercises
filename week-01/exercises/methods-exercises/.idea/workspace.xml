@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf5f28fb-4c51-4328-a64f-bf1057f3e064" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../arrays-exercises/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrays-exercises/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../arrays-exercises/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrays-exercises/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrays-exercises/arrays-exercises.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../arrays-exercises/arrays-exercises.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrays-exercises/src/Exercise01.java" beforeDir="false" afterPath="$PROJECT_DIR$/../arrays-exercises/src/Exercise01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrays-exercises/src/Exercise02.java" beforeDir="false" afterPath="$PROJECT_DIR$/../arrays-exercises/src/Exercise02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrays-exercises/src/Exercise03.java" beforeDir="false" afterPath="$PROJECT_DIR$/../arrays-exercises/src/Exercise03.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrays-exercises/src/Exercise04.java" beforeDir="false" afterPath="$PROJECT_DIR$/../arrays-exercises/src/Exercise04.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrays-exercises/src/Exercise05.java" beforeDir="false" afterPath="$PROJECT_DIR$/../arrays-exercises/src/Exercise05.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrays-exercises/src/Exercise06.java" beforeDir="false" afterPath="$PROJECT_DIR$/../arrays-exercises/src/Exercise06.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrays-exercises/src/Exercise07.java" beforeDir="false" afterPath="$PROJECT_DIR$/../arrays-exercises/src/Exercise07.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrays-exercises/src/Exercise08.java" beforeDir="false" afterPath="$PROJECT_DIR$/../arrays-exercises/src/Exercise08.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrays-exercises/src/Exercise09.java" beforeDir="false" afterPath="$PROJECT_DIR$/../arrays-exercises/src/Exercise09.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrays-exercises/src/Exercise10.java" beforeDir="false" afterPath="$PROJECT_DIR$/../arrays-exercises/src/Exercise10.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrays-exercises/src/Exercise11.java" beforeDir="false" afterPath="$PROJECT_DIR$/../arrays-exercises/src/Exercise11.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrays-exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../arrays-exercises/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +17,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="24vnmQKUev2kFgWBk1Vv8L1L9iW" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
