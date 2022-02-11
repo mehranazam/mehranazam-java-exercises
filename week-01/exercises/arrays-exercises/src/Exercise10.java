@@ -16,9 +16,23 @@ public class Exercise10 {
         String[] bugs = new String[200];
         Arrays.fill(bugs, "beetle");
         Random random = new Random();
+
+        int beetles = 0;
+        int mosquitoes = 0;
+
         for (int i = 0; i < random.nextInt(150); i++) {
             bugs[random.nextInt(bugs.length)] = "mosquito";
+            if(bugs[i] == "beetle"){
+                beetles++;
+            }else if(bugs[i] == "mosquito"){
+                mosquitoes++;
+            }
+
         }
+
+        System.out.println("Beetles: " + beetles);
+        System.out.println("Mosquitoes: " + mosquitoes);
+
         return bugs;
     }
 }

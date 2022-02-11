@@ -13,6 +13,12 @@ public class Exercise09 {
         String[] haystack = new String[100];
         int index = (int) (Math.random() * haystack.length);
         haystack[index] = "needle";
+
+        for(int i = 0; i < haystack.length; i++){
+            if(haystack[i] == haystack[index]){
+                System.out.println(index);
+            }
+        }
         return haystack;
     }
 }
