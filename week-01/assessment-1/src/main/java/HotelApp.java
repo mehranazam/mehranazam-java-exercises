@@ -7,10 +7,10 @@ public class HotelApp {
         System.out.println("Welcome to Hotel 69.");
         System.out.println("=====================");
         int capsules = 0;
-        int roomAvail = 0;
+//        int roomAvail = 0;
 
-      //  int capsules = capsuleCount("How many capsules are available?: ");
-        String[] capsules1 = new String[capsuleCount(capsules)];
+        capsules = capsuleCount();
+        String[] capsulesArray = new String[capsules];
         System.out.println("There are " + capsules + " unoccupied capsules ready to be booked.");
 
         mainMenu();
@@ -22,13 +22,13 @@ public class HotelApp {
         do {
             switch (choice) {
                 case 1:
-                    checkIn(roomAvail, capsules1);
+                    checkIn(capsules, capsulesArray);
                     break;
                 case 2:
                     checkOut();
                     break;
                 case 3:
-                    viewRooms(capsules1);
+                    viewRooms(capsulesArray);
                     break;
                 case 4:
                     exit();
@@ -49,7 +49,7 @@ public class HotelApp {
 
   //  private static Random rng = new Random();
 
-    public static int capsuleCount (int capsules){
+    public static int capsuleCount (){
         Scanner scan1 = new Scanner(System.in);
         System.out.print("How many capsules are there?");
         String count = scan1.nextLine();
@@ -61,8 +61,10 @@ public class HotelApp {
         return userInt;
     }
 
+
+
     public static void mainMenu(){
-        Scanner scn = new Scanner(System.in);
+
         System.out.println("Guest Menu");
         System.out.println("====================");
         System.out.println("1. Check in");
@@ -113,35 +115,48 @@ public class HotelApp {
 
 
 
-    public static String name(String guestName){
+    public static String name(){
         Scanner scan2 = new Scanner(System.in);
         System.out.println("Guest's name: ");
-        guestName = scan2.nextLine();
+        String guestName = scan2.nextLine();
 
         return guestName;
             }
 //
-    public static int checkIn(int roomAvail, int[] capsules1){
+    public static int checkIn(int numCapsules, String[] capsulesArray){
         Scanner scan3 = new Scanner(System.in);
         String guestName = "";
         System.out.println("Guest Check In");
         System.out.println("===============");
-        System.out.println("Guest Name: " + name(guestName));
-        System.out.print("Capsule #[1-" + capsuleCount() + ")]:  " + " ");
-        roomAvail = scan3.nextInt();
+        System.out.println("Guest Name: " + name());
+        System.out.print("Capsule #[1-" + numCapsules + ")]:  " + " ");
+        System.out.println("Please choose a room: ");
+        int chosenRoom = scan3.nextInt();
+        isRoomAvailable(chosenRoom, capsulesArray);
 
-       return roomAvail;
+       return chosenRoom;
     }
 
-    public static boolean isRoomAvailable(int roomAvail){
+    public static boolean isRoomAvailable(int roomAvail, String[] capsulesArray){
         boolean occupied = false;
-        roomAvail = 0;
+//        roomAvail = 0;
 
-        if(checkIn(roomAvail) ){
-            occupied = true;
-        }else{
-            occupied = false;
-        }
+//        if(checkIn(roomAvail) ){
+//            occupied = true;
+//        }else{
+//            occupied = false;
+//        }
+        do {
+            for(int i = 0; i < capsulesArray.length; i++){
+                if(capsulesArray[i] != null){
+                    System.out.println("Error. This room is occupied.");
+                }else{
+                    System.out.println("Success :) \n " + name() + " is booked in capsule#" + i);
+                }
+            }
+
+        }while(occupied);
+
         return occupied;
     }
 //
