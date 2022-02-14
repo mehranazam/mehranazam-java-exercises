@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf5f28fb-4c51-4328-a64f-bf1057f3e064" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../assessment-1/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../assessment-1/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../assessment-1/src/main/java/HotelApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../assessment-1/src/main/java/HotelApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tic-tac-toe/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../tic-tac-toe/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tic-tac-toe/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../tic-tac-toe/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tic-tac-toe/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../tic-tac-toe/src/main/java/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
