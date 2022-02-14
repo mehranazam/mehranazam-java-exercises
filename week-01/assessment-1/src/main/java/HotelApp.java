@@ -10,6 +10,7 @@ public class HotelApp {
 //        int roomAvail = 0;
 
         capsules = capsuleCount();
+        boolean doExit = false;
         String[] capsulesArray = new String[capsules];
         System.out.println("There are " + capsules + " unoccupied capsules ready to be booked.");
 
@@ -25,20 +26,20 @@ public class HotelApp {
                     checkIn(capsules, capsulesArray);
                     break;
                 case 2:
-                    checkOut();
+                    checkOut(capsulesArray);
                     break;
                 case 3:
                     viewRooms(capsulesArray);
                     break;
                 case 4:
-                    exit();
+                    exit(doExit);
                     break;
                 default:
                     System.out.println("Unknown action");
                     choice = scan1.nextInt();
-            }while (!(choice == 4));
+            }
 
-        }
+        }while (!(choice == 4));
 
 
 
@@ -109,12 +110,6 @@ public class HotelApp {
 //
 //        }
 
-
-
-
-
-
-
     public static String name(){
         Scanner scan2 = new Scanner(System.in);
         System.out.println("Guest's name: ");
@@ -160,14 +155,14 @@ public class HotelApp {
         return occupied;
     }
 //
-    public static int checkOut(int roomOccupied){
+    public static int checkOut(String[] capsulesArray){
         boolean occupied = false;
         Scanner scan3 = new Scanner(System.in);
         String guestName = "";
         System.out.println("Guest Check Out");
         System.out.println("===============");
         System.out.print("Capsule #[1-" + capsuleCount() + ")]:  " + " ");
-        roomOccupied = scan3.nextInt();
+        int roomOccupied = scan3.nextInt();
         if(){
 
         }
@@ -183,20 +178,21 @@ public class HotelApp {
         System.out.println("All data will be lost.");
         System.out.println("Exit [y/n]: ");
         String exit1 = scan4.nextLine();
-        if(exit1.equals("y")){
-            doExit = true;
-            System.out.println("Goodbye!");
-        }
-        else if(exit1.equals("n")){
-            doExit = false;
-            mainMenu();
-        }
+        do {
+            if (exit1.equals("y")) {
+                doExit = true;
+                System.out.println("Goodbye!");
+            } else if (exit1.equals("n")) {
+                doExit = false;
+                mainMenu();
+            }
+        }while(!(exit1.equals("n")));
         return doExit;
     }
 
 
 
-    public static void viewRooms(String[] capsules1){
+    public static void viewRooms(String[] capsuleArray){
         Scanner scan4 = new Scanner(System.in);
 //        Random random = new Random();
 //        capsules = capsuleCount();
@@ -211,10 +207,12 @@ public class HotelApp {
         int min = capsuleNumber - 5;
 
         for(int i = min; i < max; i++){
-            if(max > capsules1.length){
-                i = max % capsules1.length;
+            if(max > capsuleArray.length){
+                i = max % capsuleArray.length;
+            }else if(i < 0){
+
             }
-            guestName = capsules1[i];
+            guestName = capsuleArray[i];
             System.out.println(i + ": " + guestName);
         }
         return;
