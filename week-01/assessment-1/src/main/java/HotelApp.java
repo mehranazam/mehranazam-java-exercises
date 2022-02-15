@@ -71,7 +71,7 @@ int choice;
             }else if(choice == 4){
                 isFinished = exit();
             }
-     }while (choice != 4);
+     }while (choice != 4 && isFinished == false);
 
 
     }
@@ -229,12 +229,12 @@ int choice;
 
             int chosenRoom = 0;
             Scanner scan5 = new Scanner(System.in);
-            String guestName = "";
-            Scanner scan6 = new Scanner(System.in);
-            System.out.println("Guest Check In");
+            //String guestName = "";
+            //Scanner scan6 = new Scanner(System.in);
+            System.out.println("Guest Check Out");
             System.out.println("===============");
-            System.out.println("Guest Name: " + guestName);
-            guestName = scan6.nextLine();
+//            System.out.println("Guest Name: " + guestName);
+//            guestName = scan6.nextLine();
 //        System.out.println("Capsule #[1-" + numCapsules + "]:  ");
 //        System.out.println("Please choose a room: ");
             // int chosenRoom = scan3.nextInt();
@@ -262,8 +262,9 @@ int choice;
 //                chosenRoom = scan3.nextInt();
 //            }
             }
+            System.out.println("Success! " + capsulesArray[chosenRoom] + " has checked out of room #" + chosenRoom + ".");
             capsulesArray[chosenRoom] = null;
-            System.out.println("Success! " + guestName + " has checked out of room #" + chosenRoom + ".");
+
         }
 
 
@@ -303,7 +304,8 @@ int choice;
         String guestName = "";
         System.out.println("View Guests");
         System.out.println("============");
-        System.out.println("Capsule #[1-" + capsuleCount() + "]:  " + " ");
+        System.out.println("Capsule #[1-" + capsuleArray.length + "]:  " + " ");
+        System.out.println("Please choose a room: ");
         int capsuleNumber = Integer.parseInt(scan4.nextLine());
         int max = capsuleNumber + 6;
         int min = capsuleNumber - 5;
