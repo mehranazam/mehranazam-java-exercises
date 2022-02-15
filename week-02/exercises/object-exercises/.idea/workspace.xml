@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da3e43e2-1c77-49d7-ab83-92f4d6c8c3bf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../HotelProject/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HotelProject/src/main/java/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/object-exercises.iml" beforeDir="false" afterPath="$PROJECT_DIR$/object-exercises.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise04.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise05.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise05.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise07.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise07.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise08.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise08.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise09.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise09.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Musician.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Musician.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../palindrome/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../palindrome/.idea/compiler.xml" afterDir="false" />
-    </list>
+    <list default="true" id="da3e43e2-1c77-49d7-ab83-92f4d6c8c3bf" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
