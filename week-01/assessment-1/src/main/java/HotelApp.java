@@ -71,7 +71,7 @@ int choice;
             }else if(choice == 4){
                 isFinished = exit();
             }
-     }while (choice != 4 && isFinished == false);
+     }while (!isFinished);
 
 
     }
@@ -259,7 +259,7 @@ int choice;
                 }
 //             else {
 //                System.out.println("Error! Try again.");
-//                chosenRoom = scan3.nextInt();
+//                chosenRoom = scan3.nextInt();1
 //            }
             }
             System.out.println("Success! " + capsulesArray[chosenRoom] + " has checked out of room #" + chosenRoom + ".");
@@ -283,13 +283,10 @@ int choice;
         if (exit1.equals("y")) {
             doExit = true;
             System.out.println("Goodbye!");
-            return doExit;
-        } else {
-            return doExit;
 
         }
 
-
+        return doExit;
 
     }
 
@@ -310,15 +307,37 @@ int choice;
         int max = capsuleNumber + 6;
         int min = capsuleNumber - 5;
 
-        for(int i = min; i < max; i++){
-            if(max > capsuleArray.length){
-                i = max % capsuleArray.length;
-            }else if(i < 0){
 
+
+
+        for(int i = min; i < max; i++){
+            int safeIndex = i;
+
+            if(max > capsuleArray.length){
+                safeIndex = i % capsuleArray.length;
+            }else if(i < 0){
+                safeIndex += capsuleArray.length;
             }
-            guestName = capsuleArray[i];
-            System.out.println(i + ": " + guestName);
+//            if(capsuleArray[i] == null){
+//                //System.out.println("Unoccupied.");
+//                guestName = "Unoccupied.";
+//            }
+
+            guestName = capsuleArray[safeIndex];
+
+
+            if(guestName == null) {
+                guestName = "[Unoccupied]";
+            }
+
+            System.out.println((safeIndex) + ": " + guestName);
+
         }
-        return;
+//        return;
     }
+
+
+//    public static String replaceNull(String input) {
+//        return input == null ? "Unoccupied" : input;
+//    }
 }
