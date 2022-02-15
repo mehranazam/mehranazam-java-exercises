@@ -82,8 +82,20 @@ public class App {
 
     }
 
-    private static void checkOut(Guest hotelGuest, Hotel hotelEighteen) {
-        hotelEighteen.getGuests()[0] = null;
+    private static void checkOut(Hotel hotel) {
+        //hotelEighteen.getGuests()[0] = null;
+        System.out.println("What room number would you like to check out?");
+        Scanner scn = new Scanner(System.in);
+        int intendedRoom = Integer.parseInt(scn.nextLine());
+        if(hotel.getGuests()[intendedRoom - 1] == null){
+            System.out.println("This room is unoccupied.");
+            return;
+        }
+        Guest guest = hotel.getGuests()[intendedRoom - 1];
+        guest = null;
+        String hotelGuestName = guest.getFirstName() + " " + guest.getLastName();
+        hotel.getGuests()[intendedRoom - 1] = null;
+
 
     }
 

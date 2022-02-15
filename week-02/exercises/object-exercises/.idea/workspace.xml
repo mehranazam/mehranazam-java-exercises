@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="da3e43e2-1c77-49d7-ab83-92f4d6c8c3bf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../HotelProject/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HotelProject/src/main/java/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/object-exercises.iml" beforeDir="false" afterPath="$PROJECT_DIR$/object-exercises.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise04.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise05.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise05.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise07.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise07.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise08.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise08.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise09.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise09.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Musician.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Musician.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../palindrome/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../palindrome/.idea/compiler.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="25A1nyzbOBmzrjnC7H3xyvc4IJA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="Application.Exercise09">
+    <configuration name="Exercise04" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise04" />
+      <module name="object-exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise05" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise05" />
+      <module name="object-exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise07" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise07" />
+      <module name="object-exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise08" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise08" />
+      <module name="object-exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise09" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise09" />
+      <module name="object-exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Exercise09" />
+        <item itemvalue="Application.Exercise08" />
+        <item itemvalue="Application.Exercise07" />
+        <item itemvalue="Application.Exercise05" />
+        <item itemvalue="Application.Exercise04" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="da3e43e2-1c77-49d7-ab83-92f4d6c8c3bf" name="Changes" comment="" />
+      <created>1644955248561</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644955248561</updated>
+    </task>
+    <servers />
+  </component>
+</project>
