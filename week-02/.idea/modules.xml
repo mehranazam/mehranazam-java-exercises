@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CreatingAClass.iml" filepath="$PROJECT_DIR$/CreatingAClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Roguelike/Roguelike.iml" filepath="$PROJECT_DIR$/Roguelike/Roguelike.iml" />
     </modules>
   </component>
 </project>
