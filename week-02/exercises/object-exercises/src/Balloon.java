@@ -12,7 +12,7 @@ public class Balloon {
     }
 
     public double getPsi() {
-        if (psi == 16) {
+        if (psi >= 16) {
             return Double.POSITIVE_INFINITY;
         } else {
             return psi;
@@ -25,7 +25,7 @@ public class Balloon {
     }
 
     public boolean isExploded(){
-        if(psi == 16){
+        if(psi >= 16){
             return true;
         }else{
             return false;
