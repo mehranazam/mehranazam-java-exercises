@@ -22,7 +22,24 @@ public class Exercise04 {
      * @param quantity the number of items to purchase
      * @return the total cost with volume discounts applied
      */
+
+
     public double calculateTotalCost(double price, int quantity) {
-        return 0.0;
+       if(quantity >= 1 && quantity <= 15){
+           price = (price * quantity);
+       }else if(quantity >= 16 && quantity <= 25){
+           price = (price * quantity) * 0.95;
+       }else if(quantity >= 26 && quantity <= 50){
+           price = (price * quantity) * 0.9;
+       }else if(quantity >= 51 && quantity <= 75){
+           price = (price * quantity) * 0.85;
+       }else if(quantity > 75){
+           price = (price * quantity) * 0.78;
+       }else{
+           price = 0.0;
+       }
+
+
+        return price;
     }
 }

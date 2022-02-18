@@ -12,6 +12,16 @@ public class Exercise03 {
         HashMap<String, Vehicle> vehicleMap = VehicleRepository.getMap();
 
         // 2. Print `vehicleMap` using your "print all" method.
+
+
+        printAll(vehicleMap);
+
+
+    }
+
+    public static void printAll(HashMap<String, Vehicle> vehicleMap){
+
+        System.out.println(vehicleMap);
     }
 }
 

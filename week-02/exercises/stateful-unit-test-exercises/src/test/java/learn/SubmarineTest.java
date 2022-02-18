@@ -32,4 +32,14 @@ class SubmarineTest {
     // 4. Create a test to assert the submarine can't go above sea level.
     // (Depth can never be negative.)
     // 5. Create one or more tests to confirm `getPressureInAtmospheres` is working properly.
+
+    @Test
+    void cannotGoDeeper(){
+        submarine.dive();
+        submarine.dive();
+        submarine.dive();
+        submarine.dive();
+
+        assertEquals(100.0, submarine.dive());
+    }
 }

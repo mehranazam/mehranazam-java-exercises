@@ -44,6 +44,47 @@ public class Exercise07 {
         } while (!(input.length() == 1 && input.charAt(0) >= '1' && input.charAt(0) <= '4'));
 
         // 1. Add a switch statement to handle options 1 - 4.
+
+        Scanner scn = new Scanner(System.in);
+        Scanner scn1 = new Scanner(System.in);
+
+        MoneyStorage storage = null;
+
+        switch(input){
+            case "1":
+                System.out.println("Starting Balance: ");
+                double amount = scn.nextInt();
+                System.out.println("Description of wallet: ");
+                String wallet = scn1.nextLine();
+                storage = new Wallet(amount, wallet);
+               // return wealth;
+               break;
+            case "2":
+                System.out.println("Starting Balance: ");
+                double amount1 = scn.nextInt();
+                System.out.println("Account Number: ");
+                String accountNumber = scn1.nextLine();
+                storage = new Mortgage(amount1, accountNumber);
+               // return mortgage;
+                break;
+            case "3":
+                System.out.println("Starting Balance: ");
+                double amount2 = scn.nextInt();
+                System.out.println("Description of vault: ");
+                String vault = scn1.nextLine();
+                storage = new Vault(amount2, vault);
+               // return vault1;
+                break;
+            case "4":
+                System.out.println("Starting Balance: ");
+                double amount3 = scn.nextInt();
+                System.out.println("Account Number: ");
+                String accountNumber1 = scn1.nextLine();
+                storage = new BankAccount(amount3, accountNumber1);
+               // return bank;
+                break;
+        }
+
         // 2. For each option, create a method that returns a MoneyStorage of the appropriate type:
         // 1 == Wallet, 2 == Mortgage, 3 == Vault, 4 == Bank Account
         // Prompt the user for data. Data should be specific to the type:
@@ -53,7 +94,7 @@ public class Exercise07 {
         // - for Vault?
 
         // 3. Return the Wallet, Mortgage, Vault, or Bank Account instead of null.
-        return null;
+        return storage;
     }
 
     static void print(MoneyStorage storage) {

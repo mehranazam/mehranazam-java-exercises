@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Hero {
 
 
@@ -19,9 +21,23 @@ public class Hero {
     }
 
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPowers(Power[] powers) {
+        this.powers = powers;
+    }
 
     public String toLine(){
-        String sentence = name + " " + powers;
+        String ability = "";
+        for(Power item : powers){
+            item.getName();
+            ability += item.getName() + ", ";
+        }
+
+        String sentence = getName() + " " + ability;
+        //+ Arrays.toString(powers);
         return sentence;
     }
 }

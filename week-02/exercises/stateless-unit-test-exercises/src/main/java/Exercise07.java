@@ -11,7 +11,18 @@ public class Exercise07 {
      * @param values the array to reverse
      * @return a new array with elements in reverse order.
      */
-    public String[] reverse(String[] values) {
-        return null;
+
+
+    public String[] reverseArray(String[] values) {
+        String[] reverseValues = new String[values.length];
+
+        for(int i = 0; i < values.length; i++){
+            reverseValues[i] = values[values.length - i - 1];
+            System.out.println(reverseValues[i]);
+        }
+
+
+
+        return reverseValues;
     }
 }

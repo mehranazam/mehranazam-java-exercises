@@ -21,9 +21,9 @@ public class Exercise15 {
 
         // 2. Instantiate your three favorite super heroes with appropriate powers.
         // 3. Use the `toLine` method to print each hero's details to the console.
-        Hero.toLine(spiderman);
-        Hero.toLine(batman);
-        Hero.toLine(wolverine);
+        System.out.println(spiderman.toLine());
+        System.out.println(wolverine.toLine());
+        System.out.println(batman.toLine());
 
     }
 }

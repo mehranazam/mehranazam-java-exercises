@@ -14,5 +14,17 @@ public class Exercise04 {
         // 3. Print the new list.
         // 4. Add items in the new list to `games` with the `addAll` method.
         // 5. Print `games`.
+
+        ArrayList<BoardGame> extraGames = new ArrayList<BoardGame>();
+        extraGames.add(new BoardGame("Clue", 2, 5, "Mystery"));
+        extraGames.add(new BoardGame("Connect4", 2, 2, "Party Game"));
+        extraGames.add(new BoardGame("Pictionary", 2, 6, "Party Game"));
+        System.out.println(extraGames);
+
+        games.addAll(extraGames);
+
+        System.out.println(games);
+
+
     }
 }

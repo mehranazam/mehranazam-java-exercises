@@ -1,11 +1,12 @@
-public class Person extends Wallet {
+public class Person {
 
     private final String firstName;
     private final String lastName;
+    private MoneyStorage storage;
 
     public Person(String firstName, String lastName) {
         // Wallet constructor
-        super(0.0, String.format("%s's Wallet", firstName));
+       // super(0.0, String.format("%s's Wallet", firstName));
 
         this.firstName = firstName;
         this.lastName = lastName;
@@ -21,5 +22,13 @@ public class Person extends Wallet {
 
     public String getFullName() {
         return String.format("%s %s", firstName, lastName);
+    }
+
+    public MoneyStorage getStorage(){
+        return storage;
+    }
+
+    public void setStorage(MoneyStorage storage){
+        this.storage = storage;
     }
 }

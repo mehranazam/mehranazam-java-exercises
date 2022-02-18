@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fd9acbaf-fdf0-4dec-8656-bcdf4364d1ab" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../interface-exercises/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interface-exercises/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-exercises/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interface-exercises/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interface-exercises/interface-exercises.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-exercises/interface-exercises.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interface-exercises/src/Exercise01.java" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-exercises/src/Exercise01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interface-exercises/src/Exercise02.java" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-exercises/src/Exercise02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interface-exercises/src/Exercise04.java" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-exercises/src/Exercise04.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interface-exercises/src/Exercise06.java" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-exercises/src/Exercise06.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interface-exercises/src/Exercise07.java" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-exercises/src/Exercise07.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interface-exercises/src/Exercise08.java" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-exercises/src/Exercise08.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interface-exercises/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-exercises/src/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../object-exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../object-exercises/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../object-exercises/src/Balloon.java" beforeDir="false" afterPath="$PROJECT_DIR$/../object-exercises/src/Balloon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../object-exercises/src/Exercise10.java" beforeDir="false" afterPath="$PROJECT_DIR$/../object-exercises/src/Exercise10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../object-exercises/src/Exercise15.java" beforeDir="false" afterPath="$PROJECT_DIR$/../object-exercises/src/Exercise15.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../object-exercises/src/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/../object-exercises/src/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exercise01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exercise01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exercise02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exercise02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exercise03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exercise03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exercise04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exercise04.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exercise05.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exercise05.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exercise06.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exercise06.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exercise07.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exercise07.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Exercise02Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Exercise02Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Exercise04Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Exercise04Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Exercise06Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Exercise06Test.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="25Fmwb68kpOh0ng0kAnN7MqeVt2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="JUnit.Exercise08Test">
+    <configuration name="Exercise04Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="stateless-unit-test-exercises" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Exercise04Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise05Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="stateless-unit-test-exercises" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Exercise05Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise06Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="stateless-unit-test-exercises" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Exercise06Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise07Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="stateless-unit-test-exercises" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Exercise07Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise08Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="stateless-unit-test-exercises" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Exercise08Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Exercise08Test" />
+        <item itemvalue="JUnit.Exercise07Test" />
+        <item itemvalue="JUnit.Exercise06Test" />
+        <item itemvalue="JUnit.Exercise05Test" />
+        <item itemvalue="JUnit.Exercise04Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fd9acbaf-fdf0-4dec-8656-bcdf4364d1ab" name="Changes" comment="" />
+      <created>1645131449492</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1645131449492</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

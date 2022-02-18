@@ -1,6 +1,6 @@
 public class Balloon {
 
-    private String color;
+    private final String color;
     private double psi;
 
     public Balloon(String color){
@@ -18,17 +18,25 @@ public class Balloon {
             return psi;
         }
     }
+//    public void setColor(String color) {
+//        this.color = color;
+//    }
 
+    public void setPsi(double psi) {
+        this.psi = psi;
+    }
 
     public void inflate(){
         this.psi = this.psi + Math.random() * 5.0;
     }
 
     public boolean isExploded(){
-        if(psi >= 16){
+        if(psi > 16){
             return true;
         }else{
             return false;
         }
     }
+
+
 }

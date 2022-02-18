@@ -20,6 +20,31 @@ public class Exercise13 {
         System.out.println("=".repeat(message.length()));
     }
 
+    private void addGame(){
+        System.out.println("Add a board game.");
+        Scanner gameAddition = new Scanner(System.in);
+        String pick = gameAddition.nextLine();
+        System.out.println("Min. Players: ");
+        int pick1 = gameAddition.nextInt();
+        System.out.println("Max. Players: ");
+        int pick2 = gameAddition.nextInt();
+        System.out.println("Category: ");
+        String pick3 = gameAddition.nextLine();
+        games.add(new BoardGame(pick, pick1, pick2, pick3));
+    }
+
+
+    private void displayGames(){
+        System.out.println(games);
+    }
+
+    private void removeGames(){
+        System.out.println("Remove a board game.");
+        Scanner gameRemoval = new Scanner(System.in);
+        int remove = gameRemoval.nextInt();
+        games.remove(remove);
+    }
+
     private void run() {
 
         printHeader("Welcome to the Board Game Manager.");
@@ -39,18 +64,18 @@ public class Exercise13 {
                     // 1. Create a method that gathers user input via `console` to instantiate a BoardGame
                     // and then adds it to the `games` list.
                     // 2. Replace the the line of code below with a call to the method.
-                    printHeader("Add a board game.");
+                    addGame();
                     break;
                 case "2":
                     // 3. Create a method to display all board games in the `games` list.
                     // 4. Replace the the line of code below with a call to the method.
-                    printHeader("Display all board games.");
+                    displayGames();
                     break;
                 case "3":
                     // 5. Stretch Goal: Create a method that allows the user to remove a board game from the
                     // `games` list with an index.
                     // 6. Replace the the line of code below with a call to the method.
-                    printHeader("Remove a board game.");
+                    removeGames();
                     break;
                 case "4":
                     printHeader("Goodbye.");

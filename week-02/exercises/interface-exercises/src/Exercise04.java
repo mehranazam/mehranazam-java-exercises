@@ -2,7 +2,7 @@ public class Exercise04 {
 
     public static void main(String[] args) {
         // 1. Replace `null` with a new Vault. Initialize its balance to zero.
-        MoneyStorage storage = null;
+        MoneyStorage storage = new Vault(0.0, "Metal Vault");
 
         // 2. Run Exercise04.
         // The only output allowed is: Success!
@@ -50,7 +50,7 @@ public class Exercise04 {
             return;
         }
 
-        if (!withinThreshold(0.0, vault.getBalance(), 0.01)) {
+        if (withinThreshold(0.0, vault.getBalance(), 0.01)) {
             System.out.println("when the remaining balance is withdrawn, balance should be 0.0");
             return;
         }

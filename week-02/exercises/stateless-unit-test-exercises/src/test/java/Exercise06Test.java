@@ -24,4 +24,28 @@ class Exercise06Test {
     void shouldBeEmptyForEmptyArg() {
         assertArrayEquals(new String[0], instance.capitalizeAll(new String[0]));
     }
+
+//    @Test
+//    void shouldBeNullForNulLArg(){
+//        assertArrayEquals();
+//    }
+//
+//
+//    @Test
+//    void shouldCapitalizeMultipleElements(){
+//
+//    }
+//
+//
+//
+//    @Test
+//    void shouldIgnoreNullElements(){
+//
+//    }
+//
+//
+//    @Test
+//    void shouldIgnoreEmptyElements(){
+//
+//    }
 }

@@ -8,6 +8,8 @@ public class Vehicle {
     private int year;
     private String color;
 
+
+
     public String getVin() {
         return vin;
     }
