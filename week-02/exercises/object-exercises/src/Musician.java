@@ -1,7 +1,7 @@
 public class Musician {
 
-    private final String name;
-    private final int rating;
+    private String name;
+    private int rating;
 
     /**
      * @param name   The name of the musician.
@@ -11,8 +11,23 @@ public class Musician {
         this.name = name;
         this.rating = rating;
     }
+    public Musician(){
+
+    }
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public int getRating(){
+        return rating;
+    }
+
+    public void setRating(int rating){
+        this.rating = rating;
     }
 }
