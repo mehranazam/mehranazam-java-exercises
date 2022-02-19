@@ -2,32 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da3e43e2-1c77-49d7-ab83-92f4d6c8c3bf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../interface-exercises/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../interface-exercises/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-exercises/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../interface-exercises/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../interface-exercises/interface-exercises.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-exercises/interface-exercises.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../interface-exercises/src/Exercise01.java" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-exercises/src/Exercise01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../interface-exercises/src/Exercise02.java" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-exercises/src/Exercise02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../interface-exercises/src/Exercise04.java" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-exercises/src/Exercise04.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../interface-exercises/src/Exercise06.java" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-exercises/src/Exercise06.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../interface-exercises/src/Exercise07.java" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-exercises/src/Exercise07.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../interface-exercises/src/Exercise08.java" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-exercises/src/Exercise08.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../interface-exercises/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-exercises/src/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Animal/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Animal/src/main/java/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hash-exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hash-exercises/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../list-exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../list-exercises/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Balloon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Balloon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise10.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise15.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise15.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stateless-unit-test-exercises/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stateless-unit-test-exercises/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../stateless-unit-test-exercises/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stateless-unit-test-exercises/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stateless-unit-test-exercises/src/main/java/Exercise01.java" beforeDir="false" afterPath="$PROJECT_DIR$/../stateless-unit-test-exercises/src/main/java/Exercise01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stateless-unit-test-exercises/src/main/java/Exercise02.java" beforeDir="false" afterPath="$PROJECT_DIR$/../stateless-unit-test-exercises/src/main/java/Exercise02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stateless-unit-test-exercises/src/main/java/Exercise03.java" beforeDir="false" afterPath="$PROJECT_DIR$/../stateless-unit-test-exercises/src/main/java/Exercise03.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stateless-unit-test-exercises/src/main/java/Exercise04.java" beforeDir="false" afterPath="$PROJECT_DIR$/../stateless-unit-test-exercises/src/main/java/Exercise04.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stateless-unit-test-exercises/src/main/java/Exercise05.java" beforeDir="false" afterPath="$PROJECT_DIR$/../stateless-unit-test-exercises/src/main/java/Exercise05.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stateless-unit-test-exercises/src/test/java/Exercise02Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../stateless-unit-test-exercises/src/test/java/Exercise02Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stateless-unit-test-exercises/src/test/java/Exercise04Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../stateless-unit-test-exercises/src/test/java/Exercise04Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stateful-unit-test-exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../stateful-unit-test-exercises/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,9 +39,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.Exercise15">
-    <configuration name="Exercise08" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise08" />
+  <component name="RunManager" selected="Application.Exercise03">
+    <configuration name="Exercise03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise03" />
       <module name="object-exercises" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -98,11 +77,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Exercise03" />
         <item itemvalue="Application.Exercise15" />
         <item itemvalue="Application.Exercise14" />
         <item itemvalue="Application.Exercise12" />
         <item itemvalue="Application.Exercise09" />
-        <item itemvalue="Application.Exercise08" />
       </list>
     </recent_temporary>
   </component>

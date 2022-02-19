@@ -20,7 +20,7 @@ public class App {
          */
 
         /*
-        Can't make just an anuimal
+        Can't make just an animal
         Animals are abstract
         No such thing as just an animal
         It's always more specific
