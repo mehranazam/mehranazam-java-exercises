@@ -67,37 +67,24 @@ public class Game {
     }
 
     private void move() {
-
         System.out.print(hero.getName() + ", move [WASD]: ");
         String move = console.nextLine().trim().toUpperCase();
-
         if (move.length() != 1) {
             return;
         }
-
         switch (move.charAt(0)) {
             case 'W':
-
                 hero.moveUp();
                 break;
-
             case 'A':
                 hero.moveLeft();
-
                 break;
             case 'S':
-
                 hero.moveDown();
-
                 break;
             case 'D':
-
                 hero.moveRight();
-
                 break;
-//            case 'X':
-//                isOver = true;
-//                break;
         }
         if (hero.getX() < 0 || hero.getX() >= WIDTH
                 || hero.getY() < 0 || hero.getY() >= WIDTH) {
