@@ -256,6 +256,20 @@ public class App {
 
                     String toPrint = boardToPrint[row][col] == 1 ? "X" : "O";
                     System.out.print( toPrint );
+
+
+                    /*
+                    if(boardToPrint[row][col] == 1){
+                        toPrint = "X";
+
+
+                    }else{
+
+                     toPrint = "0";
+
+                    }
+
+                     */
                 }
 
             }
