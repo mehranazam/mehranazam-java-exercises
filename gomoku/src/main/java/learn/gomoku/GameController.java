@@ -38,7 +38,7 @@ public class GameController {
 //        System.out.println("===================");
 //        System.out.println("Player 1 is:\n1. Human\n2. Random Player\nSelect [1-2]: ");
 //        int playerNum = Integer.parseInt(console.nextLine());
-            readInt("Player 1 is:\n1. Human\n2. Random Player\nSelect [1-2]: ", 1, 2);
+            playerNumber = readInt("Player 1 is:\n1. Human\n2. Random Player\nSelect [1-2]: ", 1, 2);
         if(playerNumber == 1) {
             Player player = new HumanPlayer(readRequiredString("Player 1, enter your name: "));
             return player;
