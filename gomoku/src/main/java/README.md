@@ -40,7 +40,7 @@ Create a user interface for existing Gomoku game classes by adding new Java clas
     - If it's a draw (`game.getWinner() == null`), display it.
 4. Ask the user if they want to play again. If yes, back to major step 2. If not, exit.
 ## Classes
-### GameController
+### learn.gomoku.GameController
 Provides a user interface through which the user can interact with the `Gomoku` class.
 #### Fields
 - `Scanner` console (initialize immediately)
@@ -98,5 +98,5 @@ Provides a user interface through which the user can interact with the `Gomoku` 
 ### App
 #### Public Methods
 - `void` main(`String[]` args)
-    - instantiate a `GameController`
+    - instantiate a `learn.gomoku.GameController`
     - execute its `run` method

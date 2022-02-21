@@ -1,3 +1,5 @@
+package learn.gomoku;
+
 import learn.gomoku.game.Gomoku;
 import learn.gomoku.game.Stone;
 import learn.gomoku.players.HumanPlayer;
@@ -41,7 +43,7 @@ public class GameController {
             Player player = new HumanPlayer(readRequiredString("Player 1, enter your name: "));
             return player;
 
-        }else if(playerNumber == 2){
+        }else {
             Player computer = new RandomPlayer();
             return computer;
         }
