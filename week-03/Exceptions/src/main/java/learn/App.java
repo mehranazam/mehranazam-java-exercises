@@ -22,7 +22,7 @@ public class App {
 
         if(numberTwo < 0) {
             IllegalArgumentException ex = new IllegalArgumentException("number is negative");
-        
+
             throw ex;
         }
 
