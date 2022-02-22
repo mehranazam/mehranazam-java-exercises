@@ -19,24 +19,26 @@ public class GameController {
 
 
     public void run(){
-        setup();
-        play();
-        playAgain();
+        while(playAgain()) {
+            setup();
+            play();
+            playAgain();
+        }
     }
 
 
     private void setup(){
-        System.out.println("Player 1 is: ");
+//        System.out.println("Player 1 is: ");
         Player player1 = getPlayer(1);  // gets one player
-        System.out.println("Player 2 is: ");
+      //  System.out.println("Player 2 is: ");
         Player player2 = getPlayer(2);
         game = new Gomoku(player1, player2);
     }
 
     private Player getPlayer(int playerNumber){
 
-            playerNumber = readInt("\n1. Human\n2. Random Player\nSelect [1-2]: ", 1, 2);
-        if(playerNumber == 1) {
+         int playerNum = readInt("Player " + playerNumber + " is:\n1. Human\n2. Random Player\nSelect [1-2]: ", 1, 2);
+        if(playerNum == 1) {
             Player player = new HumanPlayer(readRequiredString("Enter your name: "));
             return player;
 
@@ -65,6 +67,7 @@ public class GameController {
             if(moveResult.getMessage() != null) {
                 System.out.println(moveResult.getMessage());
             }
+            printBoard();
         }
     }
 
@@ -97,7 +100,7 @@ public class GameController {
     private String readRequiredString(String message){
         System.out.println(message);
         String input = console.nextLine();
-        if(input == " " || input == ""){
+        while(input.isBlank()){
             System.out.println("Invalid. Try again!");
             System.out.println(message);
             input = console.nextLine();
