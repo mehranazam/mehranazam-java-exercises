@@ -1,0 +1,2 @@
+id, from, content, shareable
+7,"David", "this is content", true

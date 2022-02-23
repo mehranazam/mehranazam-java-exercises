@@ -1,7 +1,4 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 
 public class App {
 
@@ -9,6 +6,8 @@ public class App {
         File secret = newFileCreation("secretMessage.txt");
 
         writeToFile();
+
+        readFromFile("secretMessage.txt");
 
     }
 
@@ -53,6 +52,23 @@ public class App {
             if(writer != null){
                 writer.close();
             }
+        }
+    }
+
+
+
+    private static void readFromFile(String fileName) {
+        System.out.println("File " + fileName + " Contents:");
+
+        try{
+            FileReader fileReader = new FileReader(fileName);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+            for(String line = bufferedReader.readLine(); line != null; line = bufferedReader.readLine()){
+                System.out.println(line);
+            }
+        }catch(IOException exception){
+            System.out.println("Exception: " + exception);
         }
     }
 
