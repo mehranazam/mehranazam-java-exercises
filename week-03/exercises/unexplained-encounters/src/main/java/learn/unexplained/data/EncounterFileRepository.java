@@ -62,6 +62,56 @@ public class EncounterFileRepository implements EncounterRepository {
         return false;
     }
 
+    @Override
+    public List<Encounter> findByType(EncounterType lookFor) throws DataAccessException {
+        List<Encounter> toReturn = new ArrayList<>();
+
+        List<Encounter> allEncounters = this.findAll();
+
+        for(Encounter toCheck : allEncounters){
+                if(toCheck.getType() == lookFor){
+
+                    toReturn.add(toCheck);
+                }
+        }
+
+        return toReturn;
+    }
+
+    @Override
+    public boolean update(Encounter updatedEncounter) throws DataAccessException {
+        /*
+        anytime we're editing file
+        REALLY means that we're getting all the data
+        Editing some of the data
+        then rewriting the entire file
+         */
+        boolean success = false;
+
+
+        List<Encounter> allEncounters = findAll();
+
+        for(int i = 0; i < allEncounters.size(); i++){
+            Encounter toCheck = allEncounters.get(i);
+            if(toCheck.getEncounterId() == updatedEncounter.getEncounterId()){
+                /*
+                We found a matching id
+                toCheck contains the old data
+                updatedEncounter contains new data
+                we want to use List .set() method to replace old data at index i with updatedData
+                 */
+                allEncounters.set(i, updatedEncounter);
+                writeAll(allEncounters);
+                success = true;
+                break;
+                /*
+                now that list of all data has been updated, we'll rewrite file by writing every encounter
+                 */
+            }
+        }
+       return success;
+    }
+
     private int getNextId(List<Encounter> allEncounters) {
         int nextId = 0;
         for (Encounter e : allEncounters) {

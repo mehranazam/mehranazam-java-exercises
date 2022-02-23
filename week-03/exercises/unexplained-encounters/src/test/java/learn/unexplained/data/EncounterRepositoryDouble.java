@@ -12,6 +12,11 @@ public class EncounterRepositoryDouble implements EncounterRepository {
     }
 
     @Override
+    public List<Encounter> findByType(EncounterType encType) throws DataAccessException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
     public Encounter add(Encounter encounter) throws DataAccessException {
         return encounter;
     }
@@ -19,5 +24,10 @@ public class EncounterRepositoryDouble implements EncounterRepository {
     @Override
     public boolean deleteById(int encounterId) throws DataAccessException {
         return false;
+    }
+
+    @Override
+    public boolean update(Encounter updatedEncounter) throws DataAccessException {
+        throw new UnsupportedOperationException();
     }
 }
