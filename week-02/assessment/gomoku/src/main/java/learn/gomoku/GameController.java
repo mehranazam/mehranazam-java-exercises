@@ -19,11 +19,10 @@ public class GameController {
 
 
     public void run(){
-        while(playAgain()) {
+        do {
             setup();
             play();
-            playAgain();
-        }
+        }while(playAgain());
     }
 
 
@@ -119,13 +118,7 @@ public class GameController {
             return playerNum;
     }
     private boolean playAgain(){
-        boolean choice = false;
-        if(readRequiredString("Do you want to play again?").toLowerCase().equals("yes")){
-            choice = true;
-        }else{
-            choice = false;
-        }
-        return choice;
+        return (readRequiredString("Do you want to play again?").toLowerCase().equals("yes"));
     }
 
 }
