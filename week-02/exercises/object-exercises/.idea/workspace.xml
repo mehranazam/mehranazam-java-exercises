@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da3e43e2-1c77-49d7-ab83-92f4d6c8c3bf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Animal/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Animal/src/main/java/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hash-exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hash-exercises/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../list-exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../list-exercises/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stateful-unit-test-exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../stateful-unit-test-exercises/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
