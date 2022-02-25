@@ -5,21 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b93acb5-2816-4176-b656-9169a00f69ed" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../exercises/FileIOExample/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercises/FileIOExample/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercises/FileIOExample/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercises/FileIOExample/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercises/FileIOExample/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercises/FileIOExample/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercises/FileIOLab/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercises/FileIOLab/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercises/FileIOLab/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercises/FileIOLab/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercises/FileIOLab/elements.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercises/FileIOLab/new-elements-file.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercises/FileIOLab/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercises/FileIOLab/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/memories/data/MemoryFileRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/memories/data/MemoryFileRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Venus/data/orbiters-seed.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Venus/data/orbiters-seed.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Venus/data/orbiters-test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Venus/data/orbiters-test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Venus/data/orbiters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Venus/data/orbiters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercises/unexplained-encounters/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exercises/unexplained-encounters/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +38,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">

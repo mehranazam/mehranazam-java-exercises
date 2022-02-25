@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OrbiterFileRepository {
+public class OrbiterFileRepository implements OrbiterRepository {
 
     private final String filePath;
 
@@ -18,7 +18,8 @@ public class OrbiterFileRepository {
         this.filePath = filePath;
     }
 
-    public List<Orbiter> findAll(){
+    @Override
+    public List<Orbiter> findAll() throws DataAccessException{
         ArrayList<Orbiter> result = new ArrayList<>();
         try(BufferedReader reader = new BufferedReader(new FileReader(filePath))){
             reader.readLine();
@@ -40,7 +41,8 @@ public class OrbiterFileRepository {
         return result;
     }
 
-    public Orbiter findById(int orbiterId){
+    @Override
+    public Orbiter findById(int orbiterId)throws DataAccessException{
         for(Orbiter orbiter : findAll()){
             if(orbiter.getOrbiterId() == orbiterId){
                 return orbiter;
@@ -50,7 +52,8 @@ public class OrbiterFileRepository {
     }
 
 
-    public List<Orbiter> findByType (OrbiterType type){
+    @Override
+    public List<Orbiter> findByType(OrbiterType type)throws DataAccessException{
         ArrayList<Orbiter> result = new ArrayList<>();
         for(Orbiter orbiter : findAll()){
             if(orbiter.getType() == type){
@@ -60,6 +63,7 @@ public class OrbiterFileRepository {
         return result;
     }
 
+    @Override
     public Orbiter add(Orbiter orbiter) throws DataAccessException {
         List<Orbiter> all = findAll();
         //grab all orbiters
@@ -77,6 +81,7 @@ public class OrbiterFileRepository {
         return orbiter;
     }
 
+    @Override
     public boolean update(Orbiter orbiter) throws DataAccessException {
         List<Orbiter> all = findAll();
         for(int i = 0; i < all.size(); i++){
@@ -89,7 +94,16 @@ public class OrbiterFileRepository {
         return false;
     }
 
-    public boolean deleteById(int orbiterId){
+    @Override
+    public boolean deleteById(int orbiterId) throws DataAccessException {
+        List<Orbiter> all = findAll();
+        for(int i = 0; i < all.size(); i++){
+            if(all.get(i).getOrbiterId() == orbiterId){
+                all.remove(i);
+                writeAll(all);
+                return true;
+            }
+        }
         return false;
     }
 

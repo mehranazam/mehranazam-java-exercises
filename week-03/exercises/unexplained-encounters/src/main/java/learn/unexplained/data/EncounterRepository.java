@@ -16,10 +16,10 @@ public interface EncounterRepository {
     //D
 
 
-
+    boolean update(Encounter updatedEncounter) throws DataAccessException;
 
     boolean deleteById(int encounterId) throws DataAccessException;
 
 
-    boolean update(Encounter updatedEncounter) throws DataAccessException;
+
 }

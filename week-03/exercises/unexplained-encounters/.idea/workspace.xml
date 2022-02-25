@@ -5,26 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1e7bece-b586-4af2-9253-fbc9bdfc4716" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../FileIOExample/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FileIOExample/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FileIOExample/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FileIOExample/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FileIOExample/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FileIOExample/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FileIOLab/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FileIOLab/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FileIOLab/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FileIOLab/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FileIOLab/elements.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FileIOLab/new-elements-file.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FileIOLab/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FileIOLab/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/encounters-test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/encounters-test.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/learn/unexplained/data/EncounterFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/unexplained/data/EncounterFileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week-02/gomoku/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week-02/gomoku/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Venus/data/orbiters-seed.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../Venus/data/orbiters-seed.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Venus/data/orbiters-test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../Venus/data/orbiters-test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Venus/data/orbiters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../Venus/data/orbiters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Venus/src/main/java/learn/venus/data/OrbiterFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Venus/src/main/java/learn/venus/data/OrbiterFileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Venus/src/main/java/learn/venus/models/Orbiter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Venus/src/main/java/learn/venus/models/Orbiter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Venus/src/test/java/learn/venus/data/OrbiterFileRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Venus/src/test/java/learn/venus/data/OrbiterFileRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/learn/unexplained/data/EncounterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/unexplained/data/EncounterRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/learn/unexplained/data/EncounterFileRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/learn/unexplained/data/EncounterFileRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/learn/unexplained/data/EncounterRepositoryDouble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/learn/unexplained/data/EncounterRepositoryDouble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../memoryApp/src/test/java/memories/data/MemoryFileRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../memoryApp/src/test/java/memories/data/MemoryFileRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../memoryApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../memoryApp/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

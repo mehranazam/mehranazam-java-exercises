@@ -30,7 +30,7 @@ class OrbiterFileRepositoryTest {
 
 
     @Test
-    void shouldFindFiveOrbiters(){
+    void shouldFindFiveOrbiters() throws DataAccessException {
         List<Orbiter> actual = repository.findAll();
 
         assertNotNull(actual);
@@ -39,20 +39,20 @@ class OrbiterFileRepositoryTest {
 
 
     @Test
-    void shouldFindExistingOrbiter(){
+    void shouldFindExistingOrbiter() throws DataAccessException {
         Orbiter neil = repository.findById(4);
         assertNotNull(neil);
         assertEquals("Neil Armstrong", neil.getName());
     }
 
     @Test
-    void shouldNotFindExistingOrbiter(){
+    void shouldNotFindExistingOrbiter()throws DataAccessException {
         Orbiter nope = repository.findById(10000);
         assertNull(nope);
     }
 
     @Test
-    void shouldFindOneOfEachType(){
+    void shouldFindOneOfEachType() throws DataAccessException {
         List<Orbiter> modules = repository.findByType(OrbiterType.MODULE);
         assertNotNull(modules);
         assertEquals(1, modules.size());
@@ -112,6 +112,21 @@ class OrbiterFileRepositoryTest {
         Orbiter orbiter = new Orbiter();
         orbiter.setOrbiterId(100000);
         boolean actual = repository.update(orbiter);
+        assertFalse(actual);
+    }
+
+    @Test
+    void shouldDeleteExisting()throws DataAccessException{
+            boolean actual = repository.deleteById(2);
+            assertTrue(actual);
+
+            Orbiter o = repository.findById(2);
+            assertNull(o);
+    }
+
+    @Test
+    void shouldNotDeleteMissing()throws DataAccessException{
+        boolean actual = repository.deleteById(1000000);
         assertFalse(actual);
     }
 
