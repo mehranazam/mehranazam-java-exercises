@@ -40,6 +40,15 @@ public class PanelService {
     }
 
     private PanelResult validate(Panel panel) {
+        PanelResult result = new PanelResult();
+        if(panel == null){
+            result.addErrorMessage("panel cannot be null");
+            return result;
+        }
+//        if(panel.getColumn() = null || panel.getRow() = null){
+//
+//        }
+        return result;
     }
 
     public PanelResult update(Panel panel) throws DataException{
@@ -64,6 +73,29 @@ public class PanelService {
     }
 
 
+    public PanelResult deleteById(int panelId){
+        PanelResult result = new PanelResult();
+
+        Panel panel = repository.findBySection(panelId);
+
+        if(panel == null){
+            result.addErrorMessage("Could not find panel Id " + panel);
+            return result;
+        }
+        Map<Material, Integer> counts = countTypes();
+        counts.put(panel.getSection(), counts.get(panel.getSection()) - 1);
+        result = validateDomain(counts);
+        if(!result.isSuccess()){
+            return result;
+        }
+        boolean success = repository.deleteById(panelId);
+        if(!success){
+            result.addErrorMessage("Could not find panel Id " + panel);
+        }
+        return result;
+    }
+
+
     /*
     Create `PanelService`.
     *- add a `PanelRepository` (interface) field with a corresponding constructor
@@ -71,8 +103,8 @@ public class PanelService {
     *- create `PanelRepositoryTestDouble` to support service testing, this test class implements `PanelRepository`
     *- implement `findBySection` and test, implement just enough code in `PanelRepositoryTestDouble` to enable service testing
     *- implement `add` and test, requires validation
-    - implement `update` and test, requires validation
-    - implement `deleteById` and test
+    *- implement `update` and test, requires validation
+    *- implement `deleteById` and test
      */
 
 
