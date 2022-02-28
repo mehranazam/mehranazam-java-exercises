@@ -10,7 +10,10 @@ public class App {
     public static void main(String[] args) {
        // PanelFileRepository repository = new PanelFileRepository("./data/solarPanels.csv");
 
-        PanelRepository repo = new PanelFileRepository("./data/solarPanels.csv");
+        PanelFileRepository repo = new PanelFileRepository("./data/solarPanels.csv");
+
+
+
         PanelService service = new PanelService(repo);
 
         View view = new View();

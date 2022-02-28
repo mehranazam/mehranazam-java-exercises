@@ -24,4 +24,9 @@ public class PanelRepositoryTestDouble implements PanelRepository{
     public boolean deleteById(int panelId) throws DataException {
         return false;
     }
+
+    @Override
+    public List<Panel> findAll() throws DataException {
+        return null;
+    }
 }
