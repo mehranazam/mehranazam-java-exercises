@@ -116,21 +116,26 @@ public class PanelService {
         if(panel == null){
             result.addErrorMessage("Panel cannot be null");
             return result;
-        } if(Integer.parseInt(panel.getSection()) < 0 || panel.getSection() == null){
+        } if(panel.getSection() == null){
             result.addErrorMessage("Section is required");
         }
 
-        if((panel.getRow() < 0)){
+        if((panel.getRow() < 0) || (panel.getRow() > 250)){
             result.addErrorMessage("Row is required");
         }
-        if((panel.getColumn() < 0)){
+        if((panel.getColumn() < 0) || (panel.getColumn() > 250)){
             result.addErrorMessage("Column is required");
         }
-        if((panel.getInstallationYear() == Integer.parseInt(null)) || (panel.getInstallationYear() < 0)){
+        if((panel.getInstallationYear() > 2022)){
             result.addErrorMessage("When is required");
         }
 
-        if(panel.getMaterial() == null){
+        if(panel.getMaterial() == null ||
+                (panel.getMaterial() != Material.AMORPHOUS_SILICON) ||
+                (panel.getMaterial() != Material.MONOCRYSTALLINE_SILICON) ||
+                (panel.getMaterial() != Material.MULTICRYSTALLINE_SILICON) ||
+                (panel.getMaterial() != Material.CADMIUM_TELLURIDE) ||
+                (panel.getMaterial() != Material.COPPER_INDIUM_GALLIUM_SELENIDE)){
             result.addErrorMessage("Material is required");
         }
         if(!panel.isTracking()){
