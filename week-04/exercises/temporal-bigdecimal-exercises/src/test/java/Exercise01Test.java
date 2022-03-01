@@ -45,7 +45,7 @@ class Exercise01Test {
 
     @Test
     void fiveFridaysFromToday() {
-        LocalDate date = LocalDate.now();
+        LocalDate date = LocalDate.of(2022, 3, 4);
         assertEquals(fiveFridaysRefImpl(date), instance.fiveFridaysFromDate(date));
 
         date = LocalDate.now().minusDays(200);
@@ -92,7 +92,7 @@ class Exercise01Test {
         while (dt.getDayOfWeek() != DayOfWeek.FRIDAY) {
             dt = dt.plusDays(1);
         }
-        return dt.plusWeeks(4);
+        return dt.plusWeeks(5);
     }
 
     List<LocalDate> getNextFridaysRefImpl(LocalDate date, int fridayCount) {

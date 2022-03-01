@@ -1,4 +1,7 @@
+import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.Period;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 public class Exercise01 {
@@ -27,7 +30,13 @@ public class Exercise01 {
     // 4. return the fifth Friday from the parameter date.
     // if the date is Friday, don't count it.
     LocalDate fiveFridaysFromDate(LocalDate date) {
-        return null;
+
+        do{
+            date = date.plusDays(1);
+        }while(date.getDayOfWeek() != DayOfWeek.FRIDAY);
+
+        date = date.plusWeeks(5);
+        return date;
     }
 
     // 5. given a date and a count,
@@ -40,7 +49,12 @@ public class Exercise01 {
     // 6. return the absolute value of the days between two dates.
     // one may be before two, two may be before one, but neither will be null
     int getDaysBetween(LocalDate one, LocalDate two) {
-        return 0;
+//       Period difference = one.until(two);
+
+       long totalDays = ChronoUnit.DAYS.between(one, two);
+
+
+        return (int)Math.abs(totalDays);
     }
 
 }

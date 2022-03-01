@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+    Define "beans" here.
+    A bean definition registers an instance of a data type with the DI container.
+    -->
+
+    <bean class="learn.battle.announcers.Mumbler" >
+
+    </bean>
+
+    <bean class="learn.battle.announcers.ProperAnnouncer" id="announcer"/>
+
+    <bean class="learn.battle.environment.Location" id="rainbow road">
+
+        <constructor-arg value="Rainbow Road"/>
+    </bean>
+
+    <bean class="learn.battle.environment.Location" id="halo">
+
+        <constructor-arg value="Halo"/>
+    </bean>
+
+    <bean class="learn.battle.fighters.Fighter" id="david">
+        <constructor-arg value="David"/>
+        <constructor-arg value="Persona"/>
+
+    </bean>
+
+    <bean class="learn.battle.environment.Battle">
+            <constructor-arg>
+               <list>
+                   <ref bean="rainbow road"/>
+                   <ref bean="halo"/>
+               </list>
+            </constructor-arg>
+        <constructor-arg>
+            <list>
+                    <ref bean="david"/>
+                <bean class="learn.battle.fighters.Fighter">
+                    <constructor-arg value="Yoshi"/>
+                    <constructor-arg value="Egg Throw"/>
+
+                </bean>
+                <bean class="learn.battle.fighters.Fighter">
+                    <constructor-arg value="Mehran"/>
+                    <constructor-arg value="Belly Flop"/>
+
+                </bean>
+                <bean class="learn.battle.fighters.Fighter">
+                    <constructor-arg value="Luigi"/>
+                    <constructor-arg value="SUCC"/>
+
+<!--                </bean>-->
+<!--                <bean class="learn.battle.fighters.Fighter">-->
+<!--                    <constructor-arg value="Toad"/>-->
+
+<!--                </bean>-->
+<!--                <bean class="learn.battle.fighters.Fighter">-->
+<!--                    <constructor-arg value="Princess Peach"/>-->
+
+<!--                </bean>-->
+<!--                <bean class="learn.battle.fighters.Fighter">-->
+<!--                    <constructor-arg value="Link"/>-->
+
+<!--                </bean>-->
+<!--                <bean class="learn.battle.fighters.Fighter">-->
+<!--                    <constructor-arg value="Pikachu"/>-->
+
+                </bean>
+
+
+            </list>
+        </constructor-arg>
+        <property name="announcer" ref="announcer"/>
+    </bean>
+</beans>
