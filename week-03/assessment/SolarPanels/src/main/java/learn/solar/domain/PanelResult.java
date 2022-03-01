@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class PanelResult {
 
     private ArrayList<String> messages = new ArrayList<>();
-    private Panel payload;
+   // private Panel payload;
     private Panel panel;
 
     public void addErrorMessage(String message){
@@ -22,13 +22,13 @@ public class PanelResult {
         return new ArrayList<>(messages);
     }
 
-    public void setPayload(Panel payload) {
-        this.payload = payload;
-    }
-
-    public Panel getPayload() {
-        return payload;
-    }
+//    public void setPayload(Panel payload) {
+//        this.payload = payload;
+//    }
+//
+//    public Panel getPayload() {
+//        return payload;
+//    }
 
     public Panel getPanel() {
         return panel;
@@ -37,4 +37,6 @@ public class PanelResult {
     public void setPanel(Panel panel) {
         this.panel = panel;
     }
+
+
 }

@@ -18,7 +18,7 @@ public class PanelFileRepository implements PanelRepository {
         this.filePath = filePath;
     }
 
-    @Override
+
     public List<Panel> findAll() throws DataException{
         ArrayList<Panel> result = new ArrayList<>();
 
@@ -69,8 +69,20 @@ public class PanelFileRepository implements PanelRepository {
     public List<Panel> findBySection(String section) throws DataException {
         ArrayList<Panel> result = new ArrayList<>();
         for(Panel panel : findAll()){
-            if(panel.getSection() == section){
+            if(panel.getSection().equals(section)){
                 result.add(panel);
+            }
+        }
+        return result;
+    }
+
+
+    @Override
+    public Panel findById(int id) throws DataException {
+       Panel result = new Panel();
+        for(Panel panel : findAll()){
+            if(panel.getId() == id){
+                result = panel;
             }
         }
         return result;
@@ -86,7 +98,7 @@ public class PanelFileRepository implements PanelRepository {
         nextId++;
         panel.setId(nextId);
         all.add(panel);
-       // writeAll(all);
+        writeAll(all);
         return panel;
     }
 

@@ -33,7 +33,7 @@ public class PanelService {
 //        if(!result.isSuccess()){
 //            return result;
 //        }
-        List<Panel> panels = repository.findAll();
+        List<Panel> panels = repository.findBySection(panel.getSection());
         for(Panel p : panels){
             if(Objects.equals(panel.getSection(), p.getSection())
             && Objects.equals(panel.getRow(), p.getRow())
@@ -47,7 +47,7 @@ public class PanelService {
         }
 
         panel = repository.add(panel);
-        result.setPayload(panel);
+//        result.setPayload(panel);
         return result;
     }
 
@@ -58,9 +58,10 @@ public class PanelService {
         if(!result.isSuccess()){
             return result;
         }
-        Panel existing = panel.getId();
+        Panel existing = new Panel();
+        existing = panel;
         if(existing == null){
-            result.addErrorMessage("Panel section " + panel.getId() + " not found.");
+            result.addErrorMessage("Panel section " + panel.getSection() + " not found.");
             return result;
         }
         if(existing.getSection() != panel.getSection()){
@@ -78,7 +79,7 @@ public class PanelService {
     public PanelResult deleteById(int panelId) throws DataException {
         PanelResult result = new PanelResult();
 
-        Panel panel = repository.findBySection(panelId);
+        Panel panel = repository.findById(panelId);
 
         if(panel == null){
             result.addErrorMessage("Could not find panel Id " + panel);

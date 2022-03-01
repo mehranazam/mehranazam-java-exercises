@@ -5,7 +5,9 @@ import learn.solar.models.Panel;
 import java.util.List;
 
 public interface PanelRepository {
-    List<Panel> findBySection(String message) throws DataException;
+    List<Panel> findBySection(String section) throws DataException;
+
+    Panel findById(int id) throws DataException;
 
     Panel add(Panel panel) throws DataException;
 
@@ -13,5 +15,5 @@ public interface PanelRepository {
 
     boolean deleteById(int panelId) throws DataException;
 
-    public List<Panel> findAll() throws DataException
+//    public List<Panel> findAll() throws DataException;
 }
