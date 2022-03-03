@@ -4,16 +4,27 @@ import learn.unexplained.data.DataAccessException;
 import learn.unexplained.domain.EncounterResult;
 import learn.unexplained.domain.EncounterService;
 import learn.unexplained.models.Encounter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class Controller {
 
+    @Autowired
     private final EncounterService service;
-    private final View view;
 
+    private View view;
+
+    @Autowired
     public Controller(EncounterService service, View view) {
         this.service = service;
+        this.view = view;
+    }
+
+    @Autowired
+    public void setView(View view) {
         this.view = view;
     }
 
