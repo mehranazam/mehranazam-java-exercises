@@ -98,14 +98,16 @@ public class View {
 
 
     public String readSection(){
-        List<Panel> panels = new ArrayList<>();
-        int index = 1;
-        for(Panel p : panels.findBySection()){
-            System.out.printf("%s. %s%n", index++, p);
-        }
-        index--;
-        String message = String.format("Select Material [1-%s]: ", index);
-        return panels.findBySection()[readInt(message, 1, index) - 1];
+//        List<Panel> panels = new ArrayList<>();
+//        int index = 1;
+//        for(Panel p : panels.findBySection()){
+//            System.out.printf("%s. %s%n", index++, p);
+//        }
+//        index--;
+//        String message = String.format("Select Material [1-%s]: ", index);
+//        return panels.findBySection()[readInt(message, 1, index) - 1];
+
+        return readRequiredString("Choose section name:");
 
     }
 
