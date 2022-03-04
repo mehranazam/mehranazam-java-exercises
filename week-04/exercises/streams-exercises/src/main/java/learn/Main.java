@@ -1,6 +1,7 @@
 package learn;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -134,6 +135,13 @@ public class Main {
         // iteration solution
 
         // stream solution
+//        System.out.println("Students registered for Literary Genres: ");
+//        students.stream()
+//                .filter(
+//                i -> i.getRegistrations().stream()
+//                        .anyMatch(r -> r.getCourse().equalsIgnoreCase("Literary Genres"))
+//        ).forEach(System.out::println);
+
 
         // 10. Who has the latest birthday? Who is the youngest?
 
@@ -146,6 +154,16 @@ public class Main {
         // iteration solution
 
         // stream solution
+        System.out.println("Who has the highest GPA?");
+        BigDecimal maxGPA = students.stream()
+                .map(i -> i.getGpa()).sorted(Comparator.reverseOrder())
+                .findFirst().orElse(BigDecimal.ZERO);
+
+        students.stream()
+                .sorted(Comparator.comparing(Student::getGpa)
+                        .reversed())
+                .takeWhile(i -> i.getGpa().equals(maxGPA))
+                .forEach(System.out::println);
 
         // 12. Print every course students are registered for, including repeats.
 
