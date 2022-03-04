@@ -15,5 +15,5 @@ public interface PanelRepository {
 
     boolean deleteById(int panelId) throws DataException;
 
-//    public List<Panel> findAll() throws DataException;
+
 }

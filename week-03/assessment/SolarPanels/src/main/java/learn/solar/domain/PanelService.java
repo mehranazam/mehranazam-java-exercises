@@ -23,16 +23,22 @@ public class PanelService {
 
     public PanelResult add(Panel panel)throws DataException{
         PanelResult result = validate(panel);
-        if(!result.isSuccess()){
-            return result;
-        }
-
-//        Map<Material, Integer> counts = countTypes();
-//        counts.put(panel.getSection(), counts.get(panel.getSection()) + 1);
-//        result = validateDomain(counts);
 //        if(!result.isSuccess()){
 //            return result;
 //        }
+
+        if (panel != null && panel.getId() > 0) {
+            result.addErrorMessage("SolarPanel `id` should not be set.");
+        }
+
+        if (result.isSuccess()) {
+            panel = repository.add(panel);
+            result.setPanel(panel);
+        }
+
+
+
+
         List<Panel> panels = repository.findBySection(panel.getSection());
         for(Panel p : panels){
             if(Objects.equals(panel.getSection(), p.getSection())
@@ -47,7 +53,7 @@ public class PanelService {
         }
 
         panel = repository.add(panel);
-//        result.setPayload(panel);
+
         return result;
     }
 

@@ -18,7 +18,14 @@ public class PanelFileRepository implements PanelRepository {
         this.filePath = filePath;
     }
 
-
+    /**
+     * Returns a list of all solar panels
+     *<p>
+     *     This method is meant to go through all of the solar panels to meet
+     *     user's specified conditions
+     *</p>
+     * @return list of all solar panels
+    */
     public List<Panel> findAll() throws DataException{
         ArrayList<Panel> result = new ArrayList<>();
 

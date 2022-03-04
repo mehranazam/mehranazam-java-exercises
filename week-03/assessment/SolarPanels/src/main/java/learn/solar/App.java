@@ -9,7 +9,7 @@ import learn.solar.ui.View;
 
 public class App {
     public static void main(String[] args) throws DataException {
-       // PanelFileRepository repository = new PanelFileRepository("./data/solarPanels.csv");
+
 
         PanelFileRepository repo = new PanelFileRepository("./data/solarPanels.csv");
 
