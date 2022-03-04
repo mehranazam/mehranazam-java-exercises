@@ -1,5 +1,6 @@
 package learn;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
@@ -8,7 +9,7 @@ import java.util.ArrayList;
 public class NonOverlappingMicroLeaseSchedule {
 
     // on success, a MicroLease is stored in leases
-    private ArrayList<MicroLease> leases = new ArrayList<>();
+//    private ArrayList<MicroLease> leases = new ArrayList<>();
 
     // 1. Complete the add method.
 
@@ -25,7 +26,20 @@ public class NonOverlappingMicroLeaseSchedule {
      * @return true if MicroLease is valid (see rules)
      * false if not valid
      */
-    public boolean add(MicroLease lease) {
-        return false;
-    }
+//    public boolean add(MicroLease lease) {
+//            boolean result = false;
+//        if(lease == null){
+//            result = false;
+//        }
+//        else if(lease.getStart() == null || lease.getEnd() == null){
+//            result = false;
+//        }else if(lease.getStart().compareTo(lease.getEnd()) > 0){
+//            result = false;
+//    }else if(){
+//            result = false;
+//        }else{
+//            result = true;
+//        }
+//        return result;
 }
+

@@ -28,7 +28,7 @@ public class Exercise05 {
 
         while(currentDate.compareTo(endOfYear) <= 0){
             if(currentDate.compareTo(date) >= 0){
-
+                
             }
             currentDate = currentDate.plusWeeks(2);
         }

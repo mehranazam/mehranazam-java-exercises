@@ -2,6 +2,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Exercise01 {
@@ -13,18 +14,23 @@ public class Exercise01 {
 
     // 1. return today's date
     LocalDate getToday() {
-        return null;
+        return LocalDate.now();
     }
 
     // 2. return December 17, 1903 as a LocalDate
     LocalDate getFirstFlightDate() {
-        return null;
+        return LocalDate.of(1903, 12,17);
     }
 
     // 3. if parameter is in the future, return null.
     // Otherwise, add 5 days to the parameter and return the result.
     LocalDate makeFutureNullShiftThePast(LocalDate date) {
-        return null;
+        if(LocalDate.now().compareTo(date) < 0){
+            return null;
+        }
+
+        LocalDate result = date.plusDays(5);
+        return result;
     }
 
     // 4. return the fifth Friday from the parameter date.
@@ -43,7 +49,24 @@ public class Exercise01 {
     // return a list of the next `fridayCount` Fridays after the date.
     // if the date is Friday, don't include it.
     List<LocalDate> getNextFridays(LocalDate date, int fridayCount) {
-        return null;
+//       if(date.getDayOfWeek().equals(DayOfWeek.FRIDAY)){
+//
+//       }
+
+        List<LocalDate> fridays = new ArrayList<>();
+        LocalDate stop = date.plusWeeks(fridayCount);
+
+
+
+       for(; date.compareTo(stop) < 0; date = date.plusDays(1)){
+           if(date.getDayOfWeek().equals(DayOfWeek.FRIDAY)){
+               fridays.add(date);
+
+           }
+       }
+
+
+        return fridays;
     }
 
     // 6. return the absolute value of the days between two dates.

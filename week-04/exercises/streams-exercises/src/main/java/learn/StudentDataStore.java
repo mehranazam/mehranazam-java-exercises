@@ -120,4 +120,18 @@ public class StudentDataStore extends FileDataStore {
         }
         student.setRegistrations(registrations);
     }
+
+
+//    public Student findById(int id) throws IOException {
+//        Student result = new Student();
+//        List<Student> students = new ArrayList<>();
+//        students = all();
+//        for(Student student : students){
+//            if(student.getId() == id){
+//                return student;
+//            }
+//        }
+//        return result;
+//    }
 }
+
