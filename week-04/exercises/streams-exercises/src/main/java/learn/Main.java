@@ -2,6 +2,7 @@ package learn;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -123,12 +124,17 @@ public class Main {
         // iteration solution
 
         // stream solution
+//        boolean allGoodEmails = !students.stream().anyMatch(s ->  s.getEmailAddress() == null || s.getEmailAddress().isEmpty());
+//        System.out.println(allGoodEmails);
 
         // 8. Print students who are currently registered for 5 courses.
 
         // iteration solution
 
         // stream solution
+//        Stream<Student> hasFiveCourses = students.stream().filter(
+//                student -> student.getRegistrations().size() == 5);
+//        hasFiveCourses.forEach(System.out::println);
 
         // 9. Print students who are registered for the course "Literary Genres".
 
@@ -148,34 +154,56 @@ public class Main {
         // iteration solution
 
         // stream solution
+//        System.out.println("Who is the youngest? ");
+//        LocalDate youngest = students.stream()
+//                .map(y -> y.getBirthDate()).sorted(Comparator.reverseOrder())
+//                .findFirst().orElse(LocalDate.MIN);
+//
+//        students.stream()
+//                .sorted(Comparator.comparing(Student::getBirthDate)
+//                        .reversed())
+//                .takeWhile(i -> i.getBirthDate().equals(youngest))
+//                .forEach(System.out::println);
+
+
 
         // 11. Who has the highest GPA? There may be a tie.
 
         // iteration solution
 
         // stream solution
-        System.out.println("Who has the highest GPA?");
-        BigDecimal maxGPA = students.stream()
-                .map(i -> i.getGpa()).sorted(Comparator.reverseOrder())
-                .findFirst().orElse(BigDecimal.ZERO);
-
-        students.stream()
-                .sorted(Comparator.comparing(Student::getGpa)
-                        .reversed())
-                .takeWhile(i -> i.getGpa().equals(maxGPA))
-                .forEach(System.out::println);
+//        System.out.println("Who has the highest GPA?");
+//        BigDecimal maxGPA = students.stream()
+//                .map(i -> i.getGpa()).sorted(Comparator.reverseOrder())
+//                .findFirst().orElse(BigDecimal.ZERO);
+//
+//        students.stream()
+//                .sorted(Comparator.comparing(Student::getGpa)
+//                        .reversed())
+//                .takeWhile(i -> i.getGpa().equals(maxGPA))
+//                .forEach(System.out::println);
 
         // 12. Print every course students are registered for, including repeats.
 
         // iteration solution
 
         // stream solution
+//        students.stream()
+//                .flatMap(
+//                        r -> r.getRegistrations().stream()
+//                )
+//                .map(
+//                        Registration::getCourse
+//                        // c->c.getCourse()
+//                )
+//                .forEach(System.out::println);
 
         // 13. Print a distinct list of courses students are registered for.
 
         // iteration solution
 
         // stream solution
+
 
         // 14. Print a distinct list of courses students are registered for, ordered by name.
 
@@ -188,6 +216,9 @@ public class Main {
         // iteration solution
 
         // stream solution
+//        int studentStream = students.stream().mapToInt(
+//            student -> student.getCountry()
+//        );
 
         // 16. Count students per country. Order by most to fewest students.
 
