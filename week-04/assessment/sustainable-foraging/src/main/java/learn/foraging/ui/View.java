@@ -192,5 +192,17 @@ public class View {
         for (Item item : items) {
             io.printf("%s: %s, %s, %.2f $/kg%n", item.getId(), item.getName(), item.getCategory(), item.getDollarPerKilogram());
         }
+
+
+    }
+
+    public Forager makeForager(){
+        displayHeader(MainMenuOption.ADD_FORAGER.getMessage());
+        Forager forager = new Forager();
+        forager.setId(io.readRequiredString("ID of forager: "));
+        forager.setFirstName(io.readRequiredString("First name of forager: "));
+        forager.setLastName("Last name of forager: ");
+        forager.setState(io.readRequiredString("State of the forager: "));
+        return forager;
     }
 }

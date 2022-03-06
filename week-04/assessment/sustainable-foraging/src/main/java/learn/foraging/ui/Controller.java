@@ -110,6 +110,12 @@ public class Controller {
         }
     }
 
+    private void addForager() throws DataException{
+        Forager forager = view.makeForager();
+        Result result = foragerService.add(forager);
+       // view.displayStatus(result);
+    }
+
     private void addItem() throws DataException {
         Item item = view.makeItem();
         Result<Item> result = itemService.add(item);
