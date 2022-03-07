@@ -62,7 +62,7 @@ public class Controller {
                     addItem();
                     break;
                 case REPORT_KG_PER_ITEM:
-                    viewItemWeightByDate();
+//                    viewItemWeightByDate();
                     break;
                 case REPORT_CATEGORY_VALUE:
                     view.displayStatus(false, "NOT IMPLEMENTED");
@@ -151,17 +151,17 @@ public class Controller {
         return view.chooseItem(items);
     }
 
-    private void viewItemWeightByDate() throws DataException {
-        view.displayHeader(MainMenuOption.REPORT_KG_PER_ITEM.getMessage());
-        LocalDate date = view.getForageDate();
-//        Category category = view.getItemCategory();
-//        List<Item> items = itemService.findByCategory(category);
-//        Forage weight =
-         List<Forage> chart = forageService.sumKgPerItem(date);
-        Map<Forage, Double> itemWeights = forageService.findByDate(date).stream().collect(
-                Collectors.toMap(i -> i.getKilograms(), i -> i)
-        );
-        view.displayItemWeight(itemWeights);
-        view.enterToContinue();
-    }
+//    private void viewItemWeightByDate() throws DataException {
+//        view.displayHeader(MainMenuOption.REPORT_KG_PER_ITEM.getMessage());
+//        LocalDate date = view.getForageDate();
+////        Category category = view.getItemCategory();
+////        List<Item> items = itemService.findByCategory(category);
+////        Forage weight =
+//         List<Forage> chart = forageService.sumKgPerItem(date);
+//        Map<Forage, Double> itemWeights = forageService.findByDate(date).stream().collect(
+//                Collectors.toMap(i -> i.getKilograms(), i -> i)
+//        );
+//        view.displayItemWeight(itemWeights);
+//        view.enterToContinue();
+//    }
 }

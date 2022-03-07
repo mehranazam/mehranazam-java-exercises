@@ -2,16 +2,16 @@ package learn.foraging.data;
 
 import learn.foraging.models.Forager;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOError;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class ForagerFileRepository implements ForagerRepository {
 
+    private static final String DELIMITER = ",";
+    private static final String DELIMITER_REPLACEMENT = "@@@";
+    private static final String HEADER = "id,first_name,last_name,state";
     private final String filePath;
 
     public ForagerFileRepository(String filePath) {
@@ -57,15 +57,24 @@ public class ForagerFileRepository implements ForagerRepository {
     public Forager add(Forager forager) throws DataException {
         List<Forager> all = findAll();
 
-        int nextId = 0;
-        for(Forager f : all){
-            nextId = Math.max(nextId, Integer.parseInt(f.getId()));
-        }
-        nextId++;
-        forager.setId(String.valueOf(nextId));
+//        int nextId = 0;
+//        for(Forager f : all){
+//            nextId = Math.max(nextId, Integer.parseInt(f.getId()));
+//        }
+//        nextId++;
+//        forager.setId(String.valueOf(nextId));
+        forager.setId(java.util.UUID.randomUUID().toString());
         all.add(forager);
-       // writeAll(all);
+        writeAll(all);
         return forager;
+    }
+
+    private String serialize(Forager forager){
+        return String.format("%s,%s,%s,%s",
+                forager.getId(),
+                forager.getFirstName(),
+                forager.getLastName(),
+                forager.getState());
     }
 
     private Forager deserialize(String[] fields) {
@@ -75,5 +84,16 @@ public class ForagerFileRepository implements ForagerRepository {
         result.setLastName(fields[2]);
         result.setState(fields[3]);
         return result;
+    }
+
+    private void writeAll(List<Forager> foragers) throws DataException {
+        try(PrintWriter writer = new PrintWriter(filePath)){
+            writer.println(HEADER);
+            for(Forager f : foragers){
+                writer.println(serialize(f));
+            }
+        }catch (IOException ex){
+            throw new DataException(ex.getMessage(), ex);
+        }
     }
 }
