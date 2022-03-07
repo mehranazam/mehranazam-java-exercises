@@ -7,6 +7,7 @@ import learn.foraging.data.ItemRepository;
 import learn.foraging.models.Forage;
 import learn.foraging.models.Forager;
 import learn.foraging.models.Item;
+import learn.foraging.models.ItemWeight;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -41,6 +42,10 @@ public class ForageService {
         }
 
         return result;
+    }
+
+    public List<ItemWeight> findItemWeight(LocalDate date) {
+        return forageRepository.getItemWeight(date);
     }
 
     public Result<Forage> add(Forage forage) throws DataException {
