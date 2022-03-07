@@ -12,6 +12,8 @@ import learn.foraging.models.Item;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Controller {
 
@@ -156,7 +158,10 @@ public class Controller {
 //        List<Item> items = itemService.findByCategory(category);
 //        Forage weight =
          List<Forage> chart = forageService.sumKgPerItem(date);
-        view.displayItemWeight(chart);
+        Map<Forage, Double> itemWeights = forageService.findByDate(date).stream().collect(
+                Collectors.toMap(i -> i.getKilograms(), i -> i)
+        );
+        view.displayItemWeight(itemWeights);
         view.enterToContinue();
     }
 }
