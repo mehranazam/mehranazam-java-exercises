@@ -196,6 +196,15 @@ public class View {
 
     }
 
+    public void displayItemWeight(List<Forage> chart){
+        if (chart == null || chart.isEmpty()) {
+            io.println("No item found.");
+        }
+        for(Forage f : chart){
+            io.printf("Item weight: %skg", f.getKilograms());
+        }
+    }
+
     public Forager makeForager(){
         displayHeader(MainMenuOption.ADD_FORAGER.getMessage());
         Forager forager = new Forager();

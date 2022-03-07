@@ -52,15 +52,15 @@ public class Controller {
                     addForage();
                     break;
                 case ADD_FORAGER:
-                    view.displayStatus(false, "NOT IMPLEMENTED");
-                    view.enterToContinue();
+                    addForager();
+//                    view.displayStatus(false, "NOT IMPLEMENTED");
+//                    view.enterToContinue();
                     break;
                 case ADD_ITEM:
                     addItem();
                     break;
                 case REPORT_KG_PER_ITEM:
-                    view.displayStatus(false, "NOT IMPLEMENTED");
-                    view.enterToContinue();
+                    viewItemWeightByDate();
                     break;
                 case REPORT_CATEGORY_VALUE:
                     view.displayStatus(false, "NOT IMPLEMENTED");
@@ -111,6 +111,7 @@ public class Controller {
     }
 
     private void addForager() throws DataException{
+        view.displayHeader(MainMenuOption.ADD_FORAGER.getMessage());
         Forager forager = view.makeForager();
         Result result = foragerService.add(forager);
        // view.displayStatus(result);
@@ -146,5 +147,16 @@ public class Controller {
         Category category = view.getItemCategory();
         List<Item> items = itemService.findByCategory(category);
         return view.chooseItem(items);
+    }
+
+    private void viewItemWeightByDate() throws DataException {
+        view.displayHeader(MainMenuOption.REPORT_KG_PER_ITEM.getMessage());
+        LocalDate date = view.getForageDate();
+//        Category category = view.getItemCategory();
+//        List<Item> items = itemService.findByCategory(category);
+//        Forage weight =
+         List<Forage> chart = forageService.sumKgPerItem(date);
+        view.displayItemWeight(chart);
+        view.enterToContinue();
     }
 }

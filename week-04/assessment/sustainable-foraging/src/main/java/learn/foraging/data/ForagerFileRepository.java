@@ -52,7 +52,22 @@ public class ForagerFileRepository implements ForagerRepository {
                 .filter(i -> i.getState().equalsIgnoreCase(stateAbbr))
                 .collect(Collectors.toList());
     }
-    
+
+    @Override
+    public Forager add(Forager forager) throws DataException {
+        List<Forager> all = findAll();
+
+        int nextId = 0;
+        for(Forager f : all){
+            nextId = Math.max(nextId, Integer.parseInt(f.getId()));
+        }
+        nextId++;
+        forager.setId(String.valueOf(nextId));
+        all.add(forager);
+       // writeAll(all);
+        return forager;
+    }
+
     private Forager deserialize(String[] fields) {
         Forager result = new Forager();
         result.setId(fields[0]);

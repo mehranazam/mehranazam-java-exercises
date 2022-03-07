@@ -17,6 +17,10 @@ public class ItemService {
         this.repository = repository;
     }
 
+    public List<Item> findAll() throws DataException{
+        return repository.findAll();
+    }
+
     public List<Item> findByCategory(Category category) {
         return repository.findAll().stream()
                 .filter(i -> i.getCategory() == category)
@@ -51,6 +55,21 @@ public class ItemService {
 
         result.setPayload(repository.add(item));
 
+        return result;
+    }
+
+    private Result validate(Item item){
+        Result result = new Result();
+        if(item == null){
+            result.addErrorMessage("Item cannot be null");
+            return result;
+        }
+        if(item.getName() == null || item.getName().trim().length() == 0){
+            result.addErrorMessage("Item's name required");
+        }
+        if(item.getCategory() == null){
+            result.addErrorMessage("Item's category required");
+        }
         return result;
     }
 }
