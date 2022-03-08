@@ -1,13 +1,11 @@
 package learn.foraging.ui;
 
-import learn.foraging.models.Category;
-import learn.foraging.models.Forage;
-import learn.foraging.models.Forager;
-import learn.foraging.models.Item;
+import learn.foraging.models.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class View {
@@ -196,22 +194,42 @@ public class View {
 
     }
 
-    public void displayItemWeight(List<Forage> chart){
-        if (chart == null || chart.isEmpty()) {
-            io.println("No item found.");
+    public void displayItemWeight(List<ItemWeight> itemWeights){
+//        if (chart == null || chart.isEmpty()) {
+//            io.println("No item found.");
+//        }
+//        for(Forage f : chart){
+//            io.printf("Item weight: %skg", f.getKilograms());
+//        }
+        if(itemWeights.isEmpty()){
+            io.println("No values to display.");
         }
-        for(Forage f : chart){
-            io.printf("Item weight: %skg", f.getKilograms());
+        for(ItemWeight itemWeight : itemWeights){
+            io.printf("Name: %s, Kgs: %s", itemWeight.getItemName(), itemWeight.getKgs());
         }
+
     }
+
+    public void displayCategoryValue(Map<Item, BigDecimal> itemCategoryAndValues) {
+        if(itemCategoryAndValues.isEmpty()){
+            io.println("No values to display.");
+        }
+       for(Map.Entry<Item, BigDecimal> entry : itemCategoryAndValues.entrySet()){
+           System.out.println("Category: " + entry.getKey() + "Value: " + entry.getValue());
+       }
+       itemCategoryAndValues.forEach((k, v) -> System.out.println("Category: " + k + "Value: " + v));
+    }
+
 
     public Forager makeForager(){
         displayHeader(MainMenuOption.ADD_FORAGER.getMessage());
         Forager forager = new Forager();
-        forager.setId(io.readRequiredString("ID of forager: "));
+//        forager.setId(io.readRequiredString("ID of forager: "));
         forager.setFirstName(io.readRequiredString("First name of forager: "));
         forager.setLastName("Last name of forager: ");
         forager.setState(io.readRequiredString("State of the forager: "));
         return forager;
     }
+
+
 }

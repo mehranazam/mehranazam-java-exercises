@@ -1,5 +1,6 @@
 package learn.foraging.data;
 
+import learn.foraging.models.CategoryValue;
 import learn.foraging.models.Forage;
 import learn.foraging.models.ItemWeight;
 
@@ -20,4 +21,11 @@ public interface ForageRepository {
      * @return list of kgs of items
      */
     List<ItemWeight> getItemWeight(LocalDate date);
+
+//    /**
+//     *
+//     * @param date given date by user
+//     * @return list of values of category
+//     */
+//    List<CategoryValue> getCategoryValue(LocalDate date);
 }

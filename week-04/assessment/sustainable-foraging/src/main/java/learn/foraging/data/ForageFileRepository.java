@@ -1,11 +1,9 @@
 package learn.foraging.data;
 
-import learn.foraging.models.Forage;
-import learn.foraging.models.Forager;
-import learn.foraging.models.Item;
-import learn.foraging.models.ItemWeight;
+import learn.foraging.models.*;
 
 import java.io.*;
+import java.math.BigDecimal;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -89,6 +87,7 @@ public class ForageFileRepository implements ForageRepository {
                 }).collect(Collectors.toList());
         return itemWeights;
     }
+
 
     private String getFilePath(LocalDate date) {
         return Paths.get(directory, date + ".csv").toString();

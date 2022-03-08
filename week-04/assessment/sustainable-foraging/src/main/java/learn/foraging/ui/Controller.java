@@ -5,11 +5,9 @@ import learn.foraging.domain.ForageService;
 import learn.foraging.domain.ForagerService;
 import learn.foraging.domain.ItemService;
 import learn.foraging.domain.Result;
-import learn.foraging.models.Category;
-import learn.foraging.models.Forage;
-import learn.foraging.models.Forager;
-import learn.foraging.models.Item;
+import learn.foraging.models.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
@@ -62,11 +60,10 @@ public class Controller {
                     addItem();
                     break;
                 case REPORT_KG_PER_ITEM:
-//                    viewItemWeightByDate();
+                    viewItemWeightByDate();
                     break;
                 case REPORT_CATEGORY_VALUE:
-                    view.displayStatus(false, "NOT IMPLEMENTED");
-                    view.enterToContinue();
+                    viewCategoryValue();
                     break;
                 case GENERATE:
                     generate();
@@ -151,17 +148,21 @@ public class Controller {
         return view.chooseItem(items);
     }
 
-//    private void viewItemWeightByDate() throws DataException {
-//        view.displayHeader(MainMenuOption.REPORT_KG_PER_ITEM.getMessage());
-//        LocalDate date = view.getForageDate();
-////        Category category = view.getItemCategory();
-////        List<Item> items = itemService.findByCategory(category);
-////        Forage weight =
-//         List<Forage> chart = forageService.sumKgPerItem(date);
-//        Map<Forage, Double> itemWeights = forageService.findByDate(date).stream().collect(
-//                Collectors.toMap(i -> i.getKilograms(), i -> i)
-//        );
-//        view.displayItemWeight(itemWeights);
-//        view.enterToContinue();
-//    }
+    private void viewItemWeightByDate() throws DataException {
+        view.displayHeader(MainMenuOption.REPORT_KG_PER_ITEM.getMessage());
+        LocalDate date = view.getForageDate();
+        List<Forage> forages = forageService.findByDate(date);
+        List<ItemWeight> itemWeights = forageService.findItemWeight(date);
+        view.displayItemWeight(itemWeights);
+        view.enterToContinue();
+    }
+
+    private void viewCategoryValue(){
+        view.displayHeader(MainMenuOption.REPORT_CATEGORY_VALUE.getMessage());
+        LocalDate date = view.getForageDate();
+        List<Forage> forages = forageService.findByDate(date);
+        Map<Item, BigDecimal> totalCategoryValue= forageService.findCategoryValue(date);
+        view.displayCategoryValue(totalCategoryValue);
+        view.enterToContinue();
+    }
 }

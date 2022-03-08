@@ -9,11 +9,9 @@ import learn.foraging.models.Forager;
 import learn.foraging.models.Item;
 import learn.foraging.models.ItemWeight;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ForageService {
@@ -58,6 +56,28 @@ public class ForageService {
 
         return result;
     }
+
+    public Map<Item, BigDecimal> findCategoryValue(LocalDate date){
+        List<Forage> forages = forageRepository.findByDate(date);
+        List<Item> items = itemRepository.findAll();
+
+        Map<Item, BigDecimal> itemCategoryAndValues = new HashMap<>();
+
+        for(Forage f : forages){
+            for(Item i : items){
+                if(f.getItem().getId() == i.getId()){
+                    if(itemCategoryAndValues.containsKey(i)){
+                        itemCategoryAndValues.put(
+                                i, itemCategoryAndValues.get(i).add(f.getItem().getDollarPerKilogram())
+                        );
+                    }
+                    itemCategoryAndValues.putIfAbsent(i, f.getItem().getDollarPerKilogram());
+                }
+            }
+        }
+        return itemCategoryAndValues;
+    }
+
 
     public int generate(LocalDate start, LocalDate end, int count) throws DataException {
 
