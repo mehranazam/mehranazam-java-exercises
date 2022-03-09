@@ -5,26 +5,34 @@ import java.util.Objects;
 
 public class Reservation {
 
-    private int id;
+    private Host id;
     private LocalDate startDate;
     private LocalDate endDate;
+    private Guest guest;
+    private Host host;
 
 
-    public Reservation(){
-
+    public Guest getGuest() {
+        return guest;
     }
 
-    public Reservation(int id, LocalDate startDate, LocalDate endDate) {
-        this.id = id;
-        this.startDate = startDate;
-        this.endDate = endDate;
+    public void setGuest(Guest guest) {
+        this.guest = guest;
     }
 
-    public int getId() {
+    public Host getHost() {
+        return host;
+    }
+
+    public void setHost(Host host) {
+        this.host = host;
+    }
+
+    public Host getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Host id) {
         this.id = id;
     }
 

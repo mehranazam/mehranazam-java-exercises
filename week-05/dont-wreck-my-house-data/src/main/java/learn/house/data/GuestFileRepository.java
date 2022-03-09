@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class GuestFileRepository implements GuestRepository{
 
@@ -18,7 +19,10 @@ public class GuestFileRepository implements GuestRepository{
 
     @Override
     public Guest findById(String id) {
-        return null;
+        return findAll().stream()
+                .filter(i -> i.getId().equalsIgnoreCase(id))
+                .findFirst()
+                .orElse(null);
     }
 
     @Override
@@ -40,9 +44,19 @@ public class GuestFileRepository implements GuestRepository{
 
     @Override
     public List<Guest> findByEmail(String email) {
-        return (List<Guest>) findAll().stream()
+        return findAll().stream()
                 .filter(i -> i.getEmailAddress().equalsIgnoreCase(email))
-                .findFirst()
-                .orElse(null);
+                .collect(Collectors.toList());
     }
+
+    private Guest deserialize(String[] fields){
+        Guest result = new Guest();
+        result.setId(fields[0]);
+        result.setFirstName(fields[1]);
+        result.setLastName(fields[2]);
+        result.setEmailAddress(fields[3]);
+        return result;
+    }
+
+
 }

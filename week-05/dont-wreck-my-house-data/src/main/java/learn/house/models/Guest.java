@@ -2,9 +2,20 @@ package learn.house.models;
 
 public class Guest {
 
+
+    private String id;
     private String firstName;
     private String lastName;
     private String emailAddress;
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getFirstName() {
         return firstName;
