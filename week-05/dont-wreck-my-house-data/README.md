@@ -41,7 +41,7 @@ src
 ├───main
 │   └───java
 │       └───learn
-│           └───solar
+│           └───house
 │               │   App.java                      -- app entry point
 │               │
 │               ├───data

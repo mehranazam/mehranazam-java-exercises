@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9287c05b-2cb4-47de-933b-516d239afb94" name="Changes" comment="" />
+    <list default="true" id="9287c05b-2cb4-47de-933b-516d239afb94" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sustainable-foraging.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/.idea/dont-wreck-my-house-data.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/.idea/dont-wreck-my-house-data.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,5 +51,16 @@
       <updated>1646407693166</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
