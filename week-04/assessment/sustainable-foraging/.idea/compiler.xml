@@ -6,10 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="sustainable-foraging" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="sustainable-foraging" target="1.11" />
-    </bytecodeTargetLevel>
   </component>
 </project>
