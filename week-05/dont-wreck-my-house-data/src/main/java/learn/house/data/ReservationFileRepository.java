@@ -1,5 +1,6 @@
 package learn.house.data;
 
+import learn.house.models.Guest;
 import learn.house.models.Host;
 import learn.house.models.Reservation;
 
@@ -27,7 +28,7 @@ public class ReservationFileRepository implements ReservationRepository{
     @Override
     public Reservation add(Reservation reservation) throws DataException {
         List<Reservation> all = findById(reservation.getId());
-        reservation.setId(java.util.UUID.randomUUID());
+        reservation.getHost().setHostId(java.util.UUID.randomUUID().toString());
         all.add(reservation);
         writeAll(all, reservation.getId());
         return reservation;
@@ -105,15 +106,18 @@ public class ReservationFileRepository implements ReservationRepository{
 
     private String serialize(Reservation reservation){
         return String.format("%s,%s,%s,%s,%s",
-                reservation.getId(),
+                reservation.getHost().getHostId(),
                 reservation.getStartDate(),
-                reservation.getEndDate()
+                reservation.getEndDate(),
+                reservation.getGuest().getId(),
+                reservation.getHost().getTotal()
                 );
     }
 
     private Reservation deserialize(String[] fields, Host id){
         Reservation result = new Reservation();
-        result.
+        result.setId(fields[0]);
+        result.setStartDate();
     }
 
 

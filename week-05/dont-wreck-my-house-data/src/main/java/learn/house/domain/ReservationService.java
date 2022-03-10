@@ -83,7 +83,7 @@ public class ReservationService {
     }
 
 
-    private ReservationResult<Reservation> validate(Reservation reservation){
+    private ReservationResult<Reservation> validate(Reservation reservation) throws DataException {
         ReservationResult<Reservation> result = validateNulls(reservation);
         if(!result.isSuccess()){
             return result;
@@ -95,16 +95,27 @@ public class ReservationService {
         }
 
         validateChildrenExist(reservation, result);
+        if(!result.isSuccess()){
+            return result;
+        }
 
         validateDuplicates(reservation, result);
 
         return result;
     }
 
-    private void validateDuplicates(Reservation reservation, ReservationResult<Reservation> result) {
 
+        private void validateDuplicates(Reservation reservation, ReservationResult<Reservation> result) throws DataException {
+            List<Reservation> reservations = findById(reservation.getId());
+            for (Reservation r : reservations) {
+                if (reservation.getGuest().equals(r.getGuest()) && reservation.getHost().equals(r.getHost()) && !r.getId().equals(reservation.getId())) {
+                    result.addErrorMessage("Duplicate reservation found.");
+                    break;
+                }
+            }
+        }
         
-    }
+
 
     private ReservationResult<Reservation> validateNulls(Reservation reservation){
         ReservationResult<Reservation> result = new ReservationResult<>();
