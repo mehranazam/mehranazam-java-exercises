@@ -1,5 +1,7 @@
 package learn.foraging.models;
 
+import java.util.Objects;
+
 public class Forager {
 
     private String id;
@@ -37,5 +39,22 @@ public class Forager {
 
     public void setState(String state) {
         this.state = state;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Forager forager = (Forager) o;
+        return Objects.equals(id, forager.id) && Objects.equals(firstName, forager.firstName) && Objects.equals(lastName, forager.lastName) && Objects.equals(state, forager.state);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
+        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
+        result = 31 * result + (state != null ? state.hashCode() : 0);
+        return result;
     }
 }

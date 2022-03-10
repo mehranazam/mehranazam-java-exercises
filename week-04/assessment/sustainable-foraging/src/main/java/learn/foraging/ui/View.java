@@ -194,42 +194,50 @@ public class View {
 
     }
 
-    public void displayItemWeight(List<ItemWeight> itemWeights){
-//        if (chart == null || chart.isEmpty()) {
-//            io.println("No item found.");
+//    public void displayItemWeight(List<ItemWeight> itemWeights){
+////        if (chart == null || chart.isEmpty()) {
+////            io.println("No item found.");
+////        }
+////        for(Forage f : chart){
+////            io.printf("Item weight: %skg", f.getKilograms());
+////        }
+//        if(itemWeights.isEmpty()){
+//            io.println("No values to display.");
 //        }
-//        for(Forage f : chart){
-//            io.printf("Item weight: %skg", f.getKilograms());
+//        for(ItemWeight itemWeight : itemWeights){
+//            io.printf("Name: %s, Kgs: %s", itemWeight.getItemName(), itemWeight.getKgs());
 //        }
-        if(itemWeights.isEmpty()){
-            io.println("No values to display.");
-        }
-        for(ItemWeight itemWeight : itemWeights){
-            io.printf("Name: %s, Kgs: %s", itemWeight.getItemName(), itemWeight.getKgs());
-        }
+//
+//    }
 
-    }
-
-    public void displayCategoryValue(Map<Item, BigDecimal> itemCategoryAndValues) {
+    public void displayCategoryValue(Map<Category, BigDecimal> itemCategoryAndValues, LocalDate date) {
         if(itemCategoryAndValues.isEmpty()){
             io.println("No values to display.");
         }
-       for(Map.Entry<Item, BigDecimal> entry : itemCategoryAndValues.entrySet()){
-           System.out.println("Category: " + entry.getKey() + "Value: " + entry.getValue());
+       for(Map.Entry<Category, BigDecimal> entry : itemCategoryAndValues.entrySet()){
+           System.out.println("Category: " + entry.getKey() + " Value: " + entry.getValue());
        }
-       itemCategoryAndValues.forEach((k, v) -> System.out.println("Category: " + k + "Value: " + v));
+      // itemCategoryAndValues.forEach((k, v) -> System.out.println("Category: " + k + "Value: " + v));
     }
 
 
     public Forager makeForager(){
-        displayHeader(MainMenuOption.ADD_FORAGER.getMessage());
+
         Forager forager = new Forager();
 //        forager.setId(io.readRequiredString("ID of forager: "));
         forager.setFirstName(io.readRequiredString("First name of forager: "));
-        forager.setLastName("Last name of forager: ");
+        forager.setLastName(io.readRequiredString("Last name of forager: "));
         forager.setState(io.readRequiredString("State of the forager: "));
         return forager;
     }
 
 
+    public void displayItemWeight(Map<Item, Double> itemWeights, LocalDate date) {
+        if(itemWeights.isEmpty()){
+            io.println("No values to display.");
+        }
+        for(Map.Entry<Item, Double> entry : itemWeights.entrySet()){
+            System.out.println("Item: " + entry.getKey().getName() + " Weight(Kgs): " + entry.getValue());
+        }
+    }
 }

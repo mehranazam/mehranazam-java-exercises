@@ -70,22 +70,22 @@ public class ForageFileRepository implements ForageRepository {
      */
     @Override
     public List<ItemWeight> getItemWeight(LocalDate date) {
-        List<ItemWeight> itemWeights = findByDate(date).stream().collect(Collectors.groupingBy(
-                        i -> i.getItem().getName(),
-                        Collectors.summarizingDouble(Forage::getKilograms)
-                )).entrySet().stream().sorted(Comparator.comparing(Map.Entry::getKey))
-                .map(x -> new ItemWeight() {
-                    @Override
-                    public String getItemName() {
-                        return x.getKey();
-                    }
-
-                    @Override
-                    public double getKgs() {
-                        return x.getValue().getSum();
-                    }
-                }).collect(Collectors.toList());
-        return itemWeights;
+//        List<ItemWeight> itemWeights = findByDate(date).stream().collect(Collectors.groupingBy(
+//                        i -> i.getItem().getName(),
+//                        Collectors.summarizingDouble(Forage::getKilograms)
+//                )).entrySet().stream().sorted(Comparator.comparing(Map.Entry::getKey))
+//                .map(x -> new ItemWeight() {
+//                    @Override
+//                    public String getItemName() {
+//                        return x.getKey();
+//                    }
+//
+//                    @Override
+//                    public double getKgs() {
+//                        return x.getValue().getSum();
+//                    }
+//                }).collect(Collectors.toList());
+        return null;
     }
 
 

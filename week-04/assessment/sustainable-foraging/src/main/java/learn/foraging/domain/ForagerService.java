@@ -32,18 +32,6 @@ public class ForagerService {
             return result;
         }
 
-        //check for duplicate
-        List<Forager> foragers = repository.findAll();
-        for (Forager e : foragers) {
-            if (Objects.equals(forager.getId(), e.getId())
-                    && Objects.equals(forager.getFirstName(), e.getFirstName())
-                    && Objects.equals(forager.getLastName(), e.getLastName())
-                    && Objects.equals(forager.getState(), e.getState())) {
-                result.addErrorMessage("duplicate forager is not allowed");
-                return result;
-            }
-
-        }
         forager = repository.add(forager);
         result.setPayload(forager);
         return result;
@@ -57,10 +45,10 @@ public class ForagerService {
             result.addErrorMessage("forager cannot be null");
             return result;
         }
-        if(forager.getId() == null){
-            result.addErrorMessage("id is required");
-            return result;
-        }
+//        if(forager.getId() == null){
+//            result.addErrorMessage("id is required");
+//            return result;
+//        }
         if(forager.getFirstName() == null || forager.getFirstName().trim().length() == 0){
             result.addErrorMessage("First name is required");
             return result;
@@ -74,6 +62,17 @@ public class ForagerService {
             return result;
         }
 
+        if(result.isSuccess()) {
+            //check for duplicate
+            List<Forager> foragers = repository.findAll();
+            for (Forager e : foragers) {
+                if (Objects.equals(forager.getFirstName(), e.getFirstName())
+                        && Objects.equals(forager.getLastName(), e.getLastName())
+                        && Objects.equals(forager.getState(), e.getState())) {
+                    result.addErrorMessage("duplicate forager is not allowed");
+                }
+            }
+        }
 
         return result;
     }

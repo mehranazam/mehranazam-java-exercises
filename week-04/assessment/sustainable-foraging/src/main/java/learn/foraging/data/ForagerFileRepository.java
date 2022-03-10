@@ -56,17 +56,15 @@ public class ForagerFileRepository implements ForagerRepository {
     @Override
     public Forager add(Forager forager) throws DataException {
         List<Forager> all = findAll();
+        Forager newForager = new Forager();
 
-//        int nextId = 0;
-//        for(Forager f : all){
-//            nextId = Math.max(nextId, Integer.parseInt(f.getId()));
-//        }
-//        nextId++;
-//        forager.setId(String.valueOf(nextId));
-        forager.setId(java.util.UUID.randomUUID().toString());
-        all.add(forager);
+        newForager.setId(java.util.UUID.randomUUID().toString());
+        newForager.setFirstName(forager.getFirstName());
+        newForager.setLastName(forager.getLastName());
+        newForager.setState(forager.getState());
+        all.add(newForager);
         writeAll(all);
-        return forager;
+        return newForager;
     }
 
     private String serialize(Forager forager){

@@ -45,7 +45,6 @@ public class ForageRepositoryDouble implements ForageRepository {
 
     @Override
     public List<ItemWeight> getItemWeight(LocalDate date) {
-        return forages.stream()
-                .filter(i -> i.getKilograms() = getItemWeight(date));
+        return null;
     }
 }

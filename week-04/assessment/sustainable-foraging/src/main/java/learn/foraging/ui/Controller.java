@@ -112,8 +112,15 @@ public class Controller {
     private void addForager() throws DataException{
         view.displayHeader(MainMenuOption.ADD_FORAGER.getMessage());
         Forager forager = view.makeForager();
-        Result result = foragerService.add(forager);
-       // view.displayStatus(result);
+        Result<Forager> result = foragerService.add(forager);
+        if (!result.isSuccess()) {
+            view.displayStatus(false, result.getErrorMessages());
+        } else {
+            String successMessage = String.format("Forager %s created.", result.getPayload().getId());
+            view.displayStatus(true, successMessage);
+        }
+
+
     }
 
     private void addItem() throws DataException {
@@ -151,9 +158,11 @@ public class Controller {
     private void viewItemWeightByDate() throws DataException {
         view.displayHeader(MainMenuOption.REPORT_KG_PER_ITEM.getMessage());
         LocalDate date = view.getForageDate();
-        List<Forage> forages = forageService.findByDate(date);
-        List<ItemWeight> itemWeights = forageService.findItemWeight(date);
-        view.displayItemWeight(itemWeights);
+//        List<Forage> forages = forageService.findByDate(date);
+//        List<ItemWeight> itemWeights = forageService.findItemWeight(date);
+//        view.displayItemWeight(itemWeights);
+        Map<Item, Double> itemWeights = forageService.weightByItem(date);
+        view.displayItemWeight(itemWeights, date);
         view.enterToContinue();
     }
 
@@ -161,8 +170,8 @@ public class Controller {
         view.displayHeader(MainMenuOption.REPORT_CATEGORY_VALUE.getMessage());
         LocalDate date = view.getForageDate();
         List<Forage> forages = forageService.findByDate(date);
-        Map<Item, BigDecimal> totalCategoryValue= forageService.findCategoryValue(date);
-        view.displayCategoryValue(totalCategoryValue);
+        Map<Category, BigDecimal> totalCategoryValue= forageService.findCategoryValue(date);
+        view.displayCategoryValue(totalCategoryValue, date);
         view.enterToContinue();
     }
 }
