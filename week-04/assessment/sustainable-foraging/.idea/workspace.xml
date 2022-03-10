@@ -6,15 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9287c05b-2cb4-47de-933b-516d239afb94" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/src/main/java/learn/house/data/GuestFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/src/main/java/learn/house/data/GuestFileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/src/main/java/learn/house/data/HostFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/src/main/java/learn/house/data/HostFileRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/src/main/java/learn/house/data/HostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/src/main/java/learn/house/data/HostRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/src/main/java/learn/house/data/ReservationFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/src/main/java/learn/house/data/ReservationFileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/src/main/java/learn/house/data/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/src/main/java/learn/house/data/ReservationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/src/main/java/learn/house/domain/ReservationResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/src/main/java/learn/house/domain/ReservationResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/src/main/java/learn/house/domain/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/src/main/java/learn/house/domain/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/src/main/java/learn/house/models/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/src/main/java/learn/house/models/Guest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/src/main/java/learn/house/models/Host.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/src/main/java/learn/house/models/Host.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/src/main/java/learn/house/models/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week-05/dont-wreck-my-house-data/src/main/java/learn/house/models/Reservation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

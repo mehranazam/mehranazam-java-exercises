@@ -31,7 +31,7 @@ public class ReservationService {
         Map<String, Guest> guestMap = guestRepository.findAll().stream()
                 .collect(Collectors.toMap(i -> i.getId(), i -> i));
         Map<String, Host> hostMap = hostRepository.findAll().stream()
-                .collect(Collectors.toMap(i -> i.getId(), i -> i));
+                .collect(Collectors.toMap(i -> i.getHostId(), i -> i));
 
         List<Reservation> result = reservationRepository.findById(id);
         for(Reservation reservation : result){
@@ -96,7 +96,14 @@ public class ReservationService {
 
         validateChildrenExist(reservation, result);
 
+        validateDuplicates(reservation, result);
+
         return result;
+    }
+
+    private void validateDuplicates(Reservation reservation, ReservationResult<Reservation> result) {
+
+        
     }
 
     private ReservationResult<Reservation> validateNulls(Reservation reservation){

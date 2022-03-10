@@ -4,6 +4,7 @@ public class Host {
 
     private String hostId;
     private String emailAddress;
+    private String location;
 
 
     public String getHostId() {
@@ -22,4 +23,11 @@ public class Host {
         this.emailAddress = emailAddress;
     }
 
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
 }
