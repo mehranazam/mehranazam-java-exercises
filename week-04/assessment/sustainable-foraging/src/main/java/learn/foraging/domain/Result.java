@@ -1,5 +1,7 @@
 package learn.foraging.domain;
 
+import java.util.Objects;
+
 public class Result<T> extends Response {
 
     private T payload;
@@ -10,5 +12,19 @@ public class Result<T> extends Response {
 
     public void setPayload(T payload) {
         this.payload = payload;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Result<?> result = (Result<?>) o;
+        return Objects.equals(payload, result.payload);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(payload);
     }
 }

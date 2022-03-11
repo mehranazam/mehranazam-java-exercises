@@ -26,21 +26,23 @@ public class ForagerService {
                 .collect(Collectors.toList());
     }
 
-    public Result add(Forager forager) throws DataException {
-        Result result = validate(forager);
-        if (!result.isSuccess()) {
-            return result;
+    public Result<Forager> add(Forager forager) throws DataException {
+        Result<Forager> result = validate(forager);
+        if (result.isSuccess()) {
+            if(forager.getId() != null) {
+               result.addErrorMessage("ID should not be set.");
+            }else{
+                forager = repository.add(forager);
+                result.setPayload(forager);
+            }
         }
-
-        forager = repository.add(forager);
-        result.setPayload(forager);
         return result;
     }
 
 
 
-    private Result validate(Forager forager){
-        Result result = new Result();
+    private Result<Forager> validate(Forager forager){
+        Result<Forager> result = new Result<>();
         if(forager == null){
             result.addErrorMessage("forager cannot be null");
             return result;
