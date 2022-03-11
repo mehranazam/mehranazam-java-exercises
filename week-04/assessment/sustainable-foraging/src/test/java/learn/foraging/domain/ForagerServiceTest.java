@@ -62,15 +62,15 @@ class ForagerServiceTest {
         assertEquals(expected, actual);
     }
 
-//    @Test
-//    void add() throws DataException {
-//        Result<Forager> expected = new Result<>();
-//        expected.setPayload(new Forager("111222334","Jasmin","Common","CT"));
-//
-//        Result<Forager> actual = foragerService.add(new Forager(null, "Jasmin","Common","CT"));
-//
-//        assertEquals(expected, actual);
-//    }
+    @Test
+    void add() throws DataException {
+        Result<Forager> expected = new Result<>();
+        expected.setPayload(new Forager("111222333444","Jasmin","Common","CT"));
+
+        Result<Forager> actual = foragerService.add(new Forager(null, "Jasmin","Common","CT"));
+
+        assertEquals(expected, actual);
+    }
 
 
     @Test
@@ -90,6 +90,22 @@ class ForagerServiceTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void shouldNotAddBlankLastName() throws DataException {
+        Result<Forager> expected = makeResult("Last name is required");
+
+        Result<Forager> actual = foragerService.add(new Forager(null, "Mehran", "", "NJ"));
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void shouldNotAddBlankState() throws DataException {
+        Result<Forager> expected = makeResult("State is required");
+
+        Result<Forager> actual = foragerService.add(new Forager(null, "Mehran", "Azam", ""));
+        assertEquals(expected, actual);
+    }
+
 
     @Test
     void shouldNotAddDuplicates() throws DataException {
@@ -99,6 +115,10 @@ class ForagerServiceTest {
 
         assertEquals(expected, actual);
     }
+
+
+
+
 
     private Result<Forager> makeResult(String message){
         Result<Forager> result = new Result<>();
