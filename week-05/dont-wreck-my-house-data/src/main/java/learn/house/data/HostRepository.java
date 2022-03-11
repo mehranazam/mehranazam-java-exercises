@@ -1,6 +1,5 @@
 package learn.house.data;
 
-import learn.house.models.Guest;
 import learn.house.models.Host;
 
 import java.util.List;

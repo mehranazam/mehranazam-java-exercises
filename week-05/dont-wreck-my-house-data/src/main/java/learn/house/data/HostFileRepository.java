@@ -20,7 +20,7 @@ public class HostFileRepository implements HostRepository{
     @Override
     public Host findById(String id) {
         return findAll().stream()
-                .filter(i -> i.getHostId().equalsIgnoreCase(id))
+                .filter(i -> i.getId().equalsIgnoreCase(id))
                 .findFirst()
                 .orElse(null);
     }
@@ -52,7 +52,7 @@ public class HostFileRepository implements HostRepository{
 
     private Host deserialize(String[] fields){
         Host result = new Host();
-        result.setHostId(fields[0]);
+        result.setId(fields[0]);
         result.setEmailAddress(fields[1]);
         result.setLocation(fields[2]);
         return result;

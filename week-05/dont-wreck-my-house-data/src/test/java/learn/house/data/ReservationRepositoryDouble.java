@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class ReservationRepositoryDouble implements ReservationRepository{
 
-    final String id = "498604db-b6d6-4599-a503-3d8190fda823";
+    final java.lang.String id = "498604db-b6d6-4599-a503-3d8190fda823";
 
     private List<Reservation> reservations = new ArrayList<>();
 
@@ -18,7 +18,7 @@ public class ReservationRepositoryDouble implements ReservationRepository{
 
     public ReservationRepositoryDouble(){
         Reservation reservation = new Reservation();
-        reservation.getHost().setHostId(id);
+        reservation.getHost().setId(id);
         reservation.setStartDate(LocalDate.of(2022, 10, 6));
         reservation.setEndDate(LocalDate.of(2022, 10, 8));
         reservation.setGuest(ReservationRepositoryDouble.GUEST);
@@ -29,7 +29,7 @@ public class ReservationRepositoryDouble implements ReservationRepository{
 
     @Override
     public Reservation add(Reservation reservation) throws DataException {
-       reservation.getHost().setHostId(java.util.UUID.randomUUID().toString());
+       reservation.getHost().setId(java.util.UUID.randomUUID().toString());
        reservations.add(reservation);
         return reservation;
     }

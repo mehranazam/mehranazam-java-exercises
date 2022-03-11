@@ -1,14 +1,13 @@
 package learn.house.data;
 
-import learn.house.models.Guest;
 import learn.house.models.Host;
 import learn.house.models.Reservation;
 
 import java.io.*;
 import java.nio.file.Paths;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ReservationFileRepository implements ReservationRepository{
 
@@ -28,49 +27,55 @@ public class ReservationFileRepository implements ReservationRepository{
     @Override
     public Reservation add(Reservation reservation) throws DataException {
         List<Reservation> all = findById(reservation.getId());
-        reservation.getHost().setHostId(java.util.UUID.randomUUID().toString());
+        reservation.getHost().setId(java.util.UUID.randomUUID().toString());
         all.add(reservation);
         writeAll(all, reservation.getId());
         return reservation;
     }
 
-//    @Override
-//    public List<Reservation> findAll() throws DataException {
-//
-//        ArrayList<Reservation> result = new ArrayList<Reservation>();
-//
-//        try(BufferedReader reader = new BufferedReader(new FileReader(filePath))){
-//            reader.readLine();
-//            for(String line = reader.readLine(); line != null; line = reader.readLine()){
-//                Reservation reservation = deserialize(line);
-//                if(reservation != null){
-//                    result.add(reservation);
-//                }
-//            }
-//        }catch(FileNotFoundException ex){
-//
-//        }catch(IOException ex){
-//            throw new DataException(ex.getMessage(), ex);
-//        }
-//        return result;
-//    }
+    private List<Reservation> findAll() throws DataException {
 
-    @Override
-    public List<Reservation> findById(Host id) throws DataException {
-        ArrayList<Reservation> result = new ArrayList<>();
-        try(BufferedReader reader = new BufferedReader(new FileReader(getFilePath(id)))){
+        ArrayList<Reservation> result = new ArrayList<Reservation>();
+
+        try(BufferedReader reader = new BufferedReader(new FileReader(directory))){
             reader.readLine();
-
             for(String line = reader.readLine(); line != null; line = reader.readLine()){
-                String[] fields = line.split(",", -1);
-                if(fields.length == 5){
-                    result.add(deserialize(fields, id));
+                Reservation reservation = deserialize(line);
+                if(reservation != null){
+                    result.add(reservation);
                 }
             }
         }catch(IOException ex){
-
+            throw new DataException("Could not find all reservations.", ex);
         }
         return result;
+    }
+
+    @Override
+    public List<Reservation> findById(String id) throws DataException {
+        List<Reservation> allReservations = findAll();
+
+        List<Reservation> toReturn = allReservations.stream()
+                .filter(r -> r.getId().toLowerCase()
+                        .startsWith(id.toLowerCase()))
+                .collect(Collectors.toList());
+
+//        ArrayList<Reservation> result = new ArrayList<>();
+//        try(BufferedReader reader = new BufferedReader(new FileReader(getFilePath(id)))){
+//            reader.readLine();
+//
+//            for(java.lang.String line = reader.readLine(); line != null; line = reader.readLine()){
+//                java.lang.String[] fields = line.split(",", -1);
+//                if(fields.length == 5){
+//                    result.add(deserialize(fields, id));
+//                }
+//            }
+//        }catch(IOException ex){
+//
+//        }
+//        return result;
+
+
     }
 
     @Override
@@ -92,8 +97,8 @@ public class ReservationFileRepository implements ReservationRepository{
     }
 
 
-    private void writeAll(List<Reservation> reservations, Host hostId) throws DataException{
-        try(PrintWriter writer = new PrintWriter(getFilePath(hostId))){
+    private void writeAll(List<Reservation> reservations, String id) throws DataException{
+        try(PrintWriter writer = new PrintWriter(getFilePath(id))){
             writer.println(HEADER);
             for(Reservation r : reservations){
                 writer.println(serialize(r));
@@ -105,8 +110,8 @@ public class ReservationFileRepository implements ReservationRepository{
     }
 
     private String serialize(Reservation reservation){
-        return String.format("%s,%s,%s,%s,%s",
-                reservation.getHost().getHostId(),
+        return java.lang.String.format("%s,%s,%s,%s,%s",
+                reservation.getHost().getId(),
                 reservation.getStartDate(),
                 reservation.getEndDate(),
                 reservation.getGuest().getId(),
@@ -114,7 +119,7 @@ public class ReservationFileRepository implements ReservationRepository{
                 );
     }
 
-    private Reservation deserialize(String[] fields, Host id){
+    private Reservation deserialize(String[] fields, String id){
         Reservation result = new Reservation();
         result.setId(fields[0]);
         result.setStartDate();
@@ -122,7 +127,7 @@ public class ReservationFileRepository implements ReservationRepository{
 
 
     @Override
-    public boolean deleteById(Host id) throws DataException {
+    public boolean deleteById(String id) throws DataException {
         List<Reservation> all = findById(id);
         for(int i = 0; i < all.size(); i++){
             if(all.get(i).getId().equals(id)){
@@ -134,15 +139,15 @@ public class ReservationFileRepository implements ReservationRepository{
         return false;
     }
 
-    private String getFilePath(Host hostId){
-        return Paths.get(directory, hostId + ".csv").toString();
+    private java.lang.String getFilePath(String id){
+        return Paths.get(directory, id + ".csv").toString();
     }
 
-    private String clean(String value) {
+    private java.lang.String clean(String value) {
         return value.replace(DELIMITER, DELIMITER_REPLACEMENT);
     }
 
-    private String restore(String value) {
+    private java.lang.String restore(String value) {
         return value.replace(DELIMITER_REPLACEMENT, DELIMITER);
     }
 }

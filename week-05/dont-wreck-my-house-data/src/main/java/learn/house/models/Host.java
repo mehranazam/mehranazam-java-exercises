@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class Host {
 
-    private String hostId;
+    private String id;
     private String emailAddress;
     private String location;
     private BigDecimal standardRate;
@@ -12,12 +12,12 @@ public class Host {
     private BigDecimal total;
 
 
-    public String getHostId() {
-        return hostId;
+    public String getId() {
+        return id;
     }
 
-    public void setHostId(String hostId) {
-        this.hostId = hostId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getEmailAddress() {

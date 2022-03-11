@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Reservation {
 
-    private Host id;
+    private String id;
     private LocalDate startDate;
     private LocalDate endDate;
     private Guest guest;
@@ -28,11 +28,11 @@ public class Reservation {
         this.host = host;
     }
 
-    public Host getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Host id) {
+    public void setId(String id) {
         this.id = id;
     }
 

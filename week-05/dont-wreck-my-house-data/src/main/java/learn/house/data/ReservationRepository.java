@@ -11,9 +11,9 @@ public interface ReservationRepository {
 
      //   List<Reservation> findAll() throws DataException;
 
-        List<Reservation> findById(Host id) throws DataException;
+        List<Reservation> findById(String id) throws DataException;
 
         boolean edit(Reservation editReservation) throws DataException;
 
-        boolean deleteById(Host id)throws DataException;
+        boolean deleteById(String id)throws DataException;
 }

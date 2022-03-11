@@ -27,16 +27,16 @@ public class ReservationService {
         this.hostRepository = hostRepository;
     }
 
-    public List<Reservation> findById(Host id) throws DataException {
+    public List<Reservation> findById(String id) throws DataException {
         Map<String, Guest> guestMap = guestRepository.findAll().stream()
                 .collect(Collectors.toMap(i -> i.getId(), i -> i));
         Map<String, Host> hostMap = hostRepository.findAll().stream()
-                .collect(Collectors.toMap(i -> i.getHostId(), i -> i));
+                .collect(Collectors.toMap(i -> i.getId(), i -> i));
 
         List<Reservation> result = reservationRepository.findById(id);
         for(Reservation reservation : result){
             reservation.setGuest(guestMap.get(reservation.getGuest().getId()));
-            reservation.setHost(hostMap.get(reservation.getHost().getHostId()));
+            reservation.setHost(hostMap.get(reservation.getHost().getId()));
         }
         return result;
     }
@@ -156,7 +156,7 @@ public class ReservationService {
             result.addErrorMessage("Guest does not exist.");
         }
 
-        if(hostRepository.findById(reservation.getHost().getHostId()) == null){
+        if(hostRepository.findById(reservation.getHost().getId()) == null){
             result.addErrorMessage("Host does not exist.");
         }
     }
