@@ -87,7 +87,7 @@ public class ReservationFileRepository implements ReservationRepository{
 
         for(int i = 0; i < allReservations.size(); i++){
             Reservation toCheck = allReservations.get(i);
-            if(toCheck.getId() == editReservation.getId()){
+            if(toCheck.getId().equals(editReservation.getId())){
                 allReservations.set(i, editReservation);
                 writeAll(allReservations, editReservation.getId());
                 success = true;

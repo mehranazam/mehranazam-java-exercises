@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class ReservationRepositoryDouble implements ReservationRepository{
 
-    final java.lang.String id = "498604db-b6d6-4599-a503-3d8190fda823";
+    final String id = "498604db-b6d6-4599-a503-3d8190fda823";
 
     private List<Reservation> reservations = new ArrayList<>();
 
@@ -41,6 +41,16 @@ public class ReservationRepositoryDouble implements ReservationRepository{
                 .collect(Collectors.toList());
     }
 
+    @Override
+    public boolean edit(Reservation editReservation) throws DataException {
+        return false;
+    }
+
+    @Override
+    public boolean deleteById(String id) throws DataException {
+        return false;
+    }
+
 //    @Override
 //    public boolean edit(Reservation editReservation) throws DataException {
 //        boolean success = false;
@@ -51,8 +61,5 @@ public class ReservationRepositoryDouble implements ReservationRepository{
 //        return success;
 //    }
 
-    @Override
-    public boolean deleteById(Host id) throws DataException {
-        return false;
-    }
+
 }

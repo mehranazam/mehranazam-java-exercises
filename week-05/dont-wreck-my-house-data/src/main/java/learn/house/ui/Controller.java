@@ -35,7 +35,7 @@ public class Controller {
         view.displayHeader("Goodbye.");
     }
 
-    private void runAppLoop(){
+    private void runAppLoop() throws DataException {
         MainMenuOption option;
         do{
             option = view.selectMainMenuOption();
@@ -57,9 +57,43 @@ public class Controller {
     }
 
     private void editReservation() {
+        view.displayHeader(MainMenuOption.EDIT_RESERVATION.getMessage());
+        Host host = getHost();
+        Guest guest = getGuest();
+        if(host == null){
+            return;
+        }
+        if(guest == null){
+            return;
+        }
+        Reservation reservation = view.changeReservation(host, guest);
+        ReservationResult<Reservation> result = reservationService.edit(reservation);
+        if(!result.isSuccess()){
+            view.displayStatus(false, result.getErrorMessages());
+        }else{
+            String successMessage = String.format("Reservation %s edited.", result.getPayload().getId());
+            view.displayStatus(true, successMessage);
+        }
     }
 
     private void deleteReservation() {
+        view.displayHeader(MainMenuOption.CANCEL_RESERVATION.getMessage());
+        Host host = getHost();
+        Guest guest = getGuest();
+        if(host == null){
+            return;
+        }
+        if(guest == null){
+            return;
+        }
+        Reservation reservation = view.cancelReservation(host, guest);
+        ReservationResult<Reservation> result = reservationService.delete(reservation);
+        if(!result.isSuccess()){
+            view.displayStatus(false, result.getErrorMessages());
+        }else{
+            String successMessage = String.format("Reservation %s deleted.", result.getPayload().getId());
+            view.displayStatus(true, successMessage);
+        }
     }
 
     private void addReservation() throws DataException {
