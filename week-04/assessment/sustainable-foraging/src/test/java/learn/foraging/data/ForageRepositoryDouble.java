@@ -1,6 +1,7 @@
 package learn.foraging.data;
 
 import learn.foraging.models.Forage;
+import learn.foraging.models.ItemWeight;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -40,5 +41,10 @@ public class ForageRepositoryDouble implements ForageRepository {
     @Override
     public boolean update(Forage forage) throws DataException {
         return false;
+    }
+
+    @Override
+    public List<ItemWeight> getItemWeight(LocalDate date) {
+        return null;
     }
 }

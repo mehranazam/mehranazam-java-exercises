@@ -1,14 +1,16 @@
 package learn.foraging.data;
 
-import learn.foraging.models.Forage;
-import learn.foraging.models.Forager;
-import learn.foraging.models.Item;
+import learn.foraging.models.*;
 
 import java.io.*;
+import java.math.BigDecimal;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class ForageFileRepository implements ForageRepository {
 
@@ -60,6 +62,32 @@ public class ForageFileRepository implements ForageRepository {
         }
         return false;
     }
+
+    /**
+     *
+     * @param date given date by the user
+     * @return list of kgs of items
+     */
+    @Override
+    public List<ItemWeight> getItemWeight(LocalDate date) {
+//        List<ItemWeight> itemWeights = findByDate(date).stream().collect(Collectors.groupingBy(
+//                        i -> i.getItem().getName(),
+//                        Collectors.summarizingDouble(Forage::getKilograms)
+//                )).entrySet().stream().sorted(Comparator.comparing(Map.Entry::getKey))
+//                .map(x -> new ItemWeight() {
+//                    @Override
+//                    public String getItemName() {
+//                        return x.getKey();
+//                    }
+//
+//                    @Override
+//                    public double getKgs() {
+//                        return x.getValue().getSum();
+//                    }
+//                }).collect(Collectors.toList());
+        return null;
+    }
+
 
     private String getFilePath(LocalDate date) {
         return Paths.get(directory, date + ".csv").toString();
