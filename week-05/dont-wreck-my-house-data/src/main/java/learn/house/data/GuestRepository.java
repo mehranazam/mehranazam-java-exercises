@@ -5,9 +5,9 @@ import learn.house.models.Guest;
 import java.util.List;
 
 public interface GuestRepository {
-    Guest findById(String id);
+    Guest findById(String id) throws DataException;
 
-    List<Guest> findAll();
+    List<Guest> findAll() throws DataException;
 
-    List<Guest> findByEmail(String email);
+    List<Guest> findByEmail(String email) throws DataException;
 }

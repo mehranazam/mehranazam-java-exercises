@@ -47,14 +47,14 @@ class GuestFileRepositoryTest {
 //    }
 
     @Test
-    void shouldFindAll() {
+    void shouldFindAll() throws DataException {
         GuestFileRepository repository = new GuestFileRepository("./guests.csv");
         List<Guest> all = repository.findAll();
         assertEquals(1, all.size());
     }
 
     @Test
-    void shouldFindByEmail() {
+    void shouldFindByEmail() throws DataException {
         List<Guest> matching = repository.findByEmail("ogecks1@dagondesign.com");
 
         assertEquals(1, matching.size());

@@ -6,10 +6,10 @@ import java.util.List;
 
 public interface HostRepository {
 
-    Host findById(String id);
+    Host findById(String id) throws DataException;
 
-    List<Host> findAll();
+    List<Host> findAll() throws DataException;
 
-    List<Host> findByEmail(String email);
+    List<Host> findByEmail(String email) throws DataException;
 
 }

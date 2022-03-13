@@ -21,15 +21,15 @@ import java.util.List;
 class ReservationFileRepositoryTest {
 
     static final String SEED_FILE_PATH = "./reservations/reservation-seed";
-    static final String TEST_FILE_PATH = "./reservations/reservation-test/";
+    static final String TEST_FILE_PATH = "./reservations/reservation-test";
 
 
 
-    ReservationRepository repository = new ReservationFileRepository(Paths.get(TEST_FILE_PATH, "reservation-test.csv").toString());
+    ReservationRepository repository = new ReservationFileRepository(Paths.get(TEST_FILE_PATH, "reservation.csv").toString());
 
 
     @BeforeEach
-    void setup() throws IOException {
+    public void setup() throws IOException {
        clearDirectory(TEST_FILE_PATH);
 
 
@@ -60,7 +60,7 @@ class ReservationFileRepositoryTest {
         Host host = new Host();
         host.setId();
         host.setEmailAddress("tjolie@optonline.net");
-        host.setLocation("Joshua Tree");
+        host.setCity("Joshua Tree");
         host.setStandardRate(BigDecimal.valueOf(50));
         host.setWeekendRate(BigDecimal.valueOf(200));
         host.setTotal(BigDecimal.valueOf(1200));
@@ -70,8 +70,8 @@ class ReservationFileRepositoryTest {
 
     @Test
     void shouldFindById() throws DataException {
-        List<Reservation> reservations = repository.findById("1");
-        assertEquals(1, reservations.size());
+        Reservation reservation = repository.findById("1");
+        assertEquals(1, reservation.size());
 //        assertEquals(java.util.UUID.randomUUID().toString());
 
     }

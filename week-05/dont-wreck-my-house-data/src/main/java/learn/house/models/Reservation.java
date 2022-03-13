@@ -1,5 +1,6 @@
 package learn.house.models;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -10,6 +11,7 @@ public class Reservation {
     private LocalDate endDate;
     private Guest guest;
     private Host host;
+    private BigDecimal total;
 
 
     public Guest getGuest() {
@@ -52,6 +54,13 @@ public class Reservation {
         this.endDate = endDate;
     }
 
+    public BigDecimal getTotal() {
+        return total;
+    }
+
+    public void setTotal(BigDecimal total) {
+        this.total = total;
+    }
 
     @Override
     public boolean equals(Object o){

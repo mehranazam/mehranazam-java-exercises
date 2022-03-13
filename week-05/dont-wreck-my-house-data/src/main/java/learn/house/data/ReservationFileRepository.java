@@ -1,13 +1,14 @@
 package learn.house.data;
 
-import learn.house.models.Host;
+import learn.house.models.Guest;
 import learn.house.models.Reservation;
 
 import java.io.*;
+import java.math.BigDecimal;
 import java.nio.file.Paths;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class ReservationFileRepository implements ReservationRepository{
 
@@ -26,7 +27,7 @@ public class ReservationFileRepository implements ReservationRepository{
 
     @Override
     public Reservation add(Reservation reservation) throws DataException {
-        List<Reservation> all = findById(reservation.getId());
+        List<Reservation> all = findAll();
         reservation.getHost().setId(java.util.UUID.randomUUID().toString());
         all.add(reservation);
         writeAll(all, reservation.getId());
@@ -35,14 +36,14 @@ public class ReservationFileRepository implements ReservationRepository{
 
     private List<Reservation> findAll() throws DataException {
 
-        ArrayList<Reservation> result = new ArrayList<Reservation>();
+        ArrayList<Reservation> result = new ArrayList<>();
 
         try(BufferedReader reader = new BufferedReader(new FileReader(directory))){
             reader.readLine();
             for(String line = reader.readLine(); line != null; line = reader.readLine()){
-                Reservation reservation = deserialize(line);
-                if(reservation != null){
-                    result.add(reservation);
+                String[] fields = line.split(",", -1);
+                if(fields.length == 5){
+                    result.add(deserialize(fields));
                 }
             }
         }catch(IOException ex){
@@ -52,13 +53,13 @@ public class ReservationFileRepository implements ReservationRepository{
     }
 
     @Override
-    public List<Reservation> findById(String id) throws DataException {
+    public Reservation findById(String id) throws DataException {
         List<Reservation> allReservations = findAll();
 
-        List<Reservation> toReturn = allReservations.stream()
-                .filter(r -> r.getId().toLowerCase()
-                        .startsWith(id.toLowerCase()))
-                .collect(Collectors.toList());
+        return allReservations.stream()
+                .filter(r -> r.getId().equals(id))
+                .findAny()
+                .orElse(null);
 
 //        ArrayList<Reservation> result = new ArrayList<>();
 //        try(BufferedReader reader = new BufferedReader(new FileReader(getFilePath(id)))){
@@ -82,7 +83,7 @@ public class ReservationFileRepository implements ReservationRepository{
     public boolean edit(Reservation editReservation) throws DataException {
         boolean success = false;
 
-        List <Reservation> allReservations = findById(editReservation.getId());
+        List <Reservation> allReservations = findAll();
 
         for(int i = 0; i < allReservations.size(); i++){
             Reservation toCheck = allReservations.get(i);
@@ -111,24 +112,33 @@ public class ReservationFileRepository implements ReservationRepository{
 
     private String serialize(Reservation reservation){
         return java.lang.String.format("%s,%s,%s,%s,%s",
-                reservation.getHost().getId(),
+                reservation.getId(),
                 reservation.getStartDate(),
                 reservation.getEndDate(),
                 reservation.getGuest().getId(),
-                reservation.getHost().getTotal()
+                reservation.getTotal()
                 );
     }
 
-    private Reservation deserialize(String[] fields, String id){
+    private Reservation deserialize(String[] fields){
+        //"id,start_date,end_date,guest_id,total";
         Reservation result = new Reservation();
         result.setId(fields[0]);
-        result.setStartDate();
+        result.setStartDate(LocalDate.parse(fields[1]));
+        result.setEndDate(LocalDate.parse(fields[2]));
+
+        Guest guest = new Guest();
+        guest.setId(fields[3]);
+        result.setGuest(guest);
+        result.setTotal(BigDecimal.valueOf(Long.parseLong(fields[4])));
+
+        return result;
     }
 
 
     @Override
     public boolean deleteById(String id) throws DataException {
-        List<Reservation> all = findById(id);
+        List<Reservation> all = findAll();
         for(int i = 0; i < all.size(); i++){
             if(all.get(i).getId().equals(id)){
                 all.remove(i);
@@ -139,15 +149,15 @@ public class ReservationFileRepository implements ReservationRepository{
         return false;
     }
 
-    private java.lang.String getFilePath(String id){
+    private String getFilePath(String id){
         return Paths.get(directory, id + ".csv").toString();
     }
 
-    private java.lang.String clean(String value) {
+    private String clean(String value) {
         return value.replace(DELIMITER, DELIMITER_REPLACEMENT);
     }
 
-    private java.lang.String restore(String value) {
+    private String restore(String value) {
         return value.replace(DELIMITER_REPLACEMENT, DELIMITER);
     }
 }

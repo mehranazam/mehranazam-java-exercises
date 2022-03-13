@@ -28,6 +28,27 @@ public class ReservationService {
     }
 
     public List<Reservation> findById(String id) throws DataException {
+//        ReservationResult<List<Host>> result = new ReservationResult<>();
+//
+//        try{
+//            List<Reservation> matchingReservations = reservationRepository.findById(id);
+//            if(matchingReservations.size() > 1){
+//                result.addErrorMessage("Reservation matched with another.");
+//            }else if(matchingReservations.size() == 0){
+//                result.addErrorMessage("ID doesn't match any reservation.");
+//            }else{
+//                List<Host> matchingHosts = hostRepository.findByEmail(matchingReservations.get(0).getId());
+//                List<Host> fullyHydratedHosts = new ArrayList<>();
+//                for(Host toHydrate : matchingHosts){
+//                    fullyHydratedHosts.add(hydrate(toHydrate));
+//                }
+//                result.setPayload(fullyHydratedHosts);
+//            }
+//        }catch(DataException ex){
+//            result.addErrorMessage(ex.getMessage());
+//        }
+//        return result;
+
         Map<String, Guest> guestMap = guestRepository.findAll().stream()
                 .collect(Collectors.toMap(i -> i.getId(), i -> i));
         Map<String, Host> hostMap = hostRepository.findAll().stream()
@@ -40,6 +61,12 @@ public class ReservationService {
         }
         return result;
     }
+
+//    private Host hydrate(Host toHydrate) {
+//        Reservation matchingReservation = reservationRepository.findById(toHydrate.g);
+//        Host matchingHost = hostRepository.findById();
+//
+//    }
 
     public ReservationResult<Reservation> add(Reservation reservation) throws DataException {
         ReservationResult<Reservation> result = validate(reservation);

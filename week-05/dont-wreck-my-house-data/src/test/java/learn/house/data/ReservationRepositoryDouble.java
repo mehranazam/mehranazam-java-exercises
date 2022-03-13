@@ -35,7 +35,7 @@ public class ReservationRepositoryDouble implements ReservationRepository{
     }
 
     @Override
-    public List<Reservation> findById(Host id) throws DataException {
+    public Reservation findById(String id) throws DataException {
         return reservations.stream()
                 .filter(i -> i.getId().equals(id))
                 .collect(Collectors.toList());
