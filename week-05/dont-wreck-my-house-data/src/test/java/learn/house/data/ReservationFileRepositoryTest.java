@@ -47,31 +47,32 @@ class ReservationFileRepositoryTest {
     @Test
     void shouldAdd() throws DataException {
         Reservation reservation = new Reservation();
-//        reservation.setId();
+        reservation.setId("13");
         reservation.setStartDate(LocalDate.of(2022, 10, 6));
         reservation.setEndDate(LocalDate.of(2022, 10, 8));
+        reservation.getGuest().getId();
 
-        Guest guest = new Guest();
-        guest.setId("10");
-        guest.setFirstName("Mark");
-        guest.setLastName("Stevens");
-        guest.setEmailAddress("mstevens@gmail.com");
-
-        Host host = new Host();
-        host.setId();
-        host.setEmailAddress("tjolie@optonline.net");
-        host.setCity("Joshua Tree");
-        host.setStandardRate(BigDecimal.valueOf(50));
-        host.setWeekendRate(BigDecimal.valueOf(200));
-        host.setTotal(BigDecimal.valueOf(1200));
+//        Guest guest = new Guest();
+//        guest.setId("1001");
+//        guest.setFirstName("Mark");
+//        guest.setLastName("Stevens");
+//        guest.setEmailAddress("mstevens@gmail.com");
+//
+//        Host host = new Host();
+//        host.setId();
+//        host.setEmailAddress("tjolie@optonline.net");
+//        host.setCity("Joshua Tree");
+//        host.setStandardRate(BigDecimal.valueOf(50));
+//        host.setWeekendRate(BigDecimal.valueOf(200));
+//        host.setTotal(BigDecimal.valueOf(1200));
 
         reservation = repository.add(reservation);
     }
 
     @Test
     void shouldFindById() throws DataException {
-        Reservation reservation = repository.findById("1");
-        assertEquals(1, reservation.size());
+        List<Reservation> reservations = repository.findById("1");
+        assertEquals(25, reservations.size());
 //        assertEquals(java.util.UUID.randomUUID().toString());
 
     }
