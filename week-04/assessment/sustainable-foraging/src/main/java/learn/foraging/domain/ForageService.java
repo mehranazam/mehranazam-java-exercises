@@ -4,15 +4,11 @@ import learn.foraging.data.DataException;
 import learn.foraging.data.ForageRepository;
 import learn.foraging.data.ForagerRepository;
 import learn.foraging.data.ItemRepository;
-import learn.foraging.models.Forage;
-import learn.foraging.models.Forager;
-import learn.foraging.models.Item;
+import learn.foraging.models.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ForageService {
@@ -43,6 +39,10 @@ public class ForageService {
         return result;
     }
 
+    public List<ItemWeight> findItemWeight(LocalDate date) {
+        return forageRepository.getItemWeight(date);
+    }
+
     public Result<Forage> add(Forage forage) throws DataException {
         Result<Forage> result = validate(forage);
         if (!result.isSuccess()) {
@@ -53,6 +53,35 @@ public class ForageService {
 
         return result;
     }
+
+    public Map<Category, BigDecimal> findCategoryValue(LocalDate date){
+        List<Forage> forages = findByDate(date);
+
+        Map<Category, BigDecimal> categoryAndValues = new HashMap<>();
+        categoryAndValues.put(Category.EDIBLE, BigDecimal.ZERO);
+        categoryAndValues.put(Category.INEDIBLE, BigDecimal.ZERO);
+        categoryAndValues.put(Category.MEDICINAL, BigDecimal.ZERO);
+        categoryAndValues.put(Category.POISONOUS, BigDecimal.ZERO);
+
+        for(Forage f : forages){
+
+            Category category = f.getItem().getCategory();
+            BigDecimal value = categoryAndValues.get(category).add(f.getValue());
+            categoryAndValues.put(category, value);
+//            for(Item i : items){
+//                if(f.getItem().getId() == i.getId()){
+//                    if(categoryAndValues.containsKey(i)){
+//                        categoryAndValues.put(
+//                                i, categoryAndValues.get(i).add(f.getItem().getDollarPerKilogram())
+//                        );
+//                    }
+//                    categoryAndValues.putIfAbsent(i, f.getItem().getDollarPerKilogram());
+//                }
+//            }
+        }
+        return categoryAndValues;
+    }
+
 
     public int generate(LocalDate start, LocalDate end, int count) throws DataException {
 
@@ -97,6 +126,11 @@ public class ForageService {
         }
 
         validateChildrenExist(forage, result);
+        if(!result.isSuccess()){
+            return result;
+        }
+
+        validateDuplicates(forage, result);
 
         return result;
     }
@@ -144,5 +178,22 @@ public class ForageService {
         if (itemRepository.findById(forage.getItem().getId()) == null) {
             result.addErrorMessage("Item does not exist.");
         }
+    }
+
+    private void validateDuplicates(Forage forage, Result<Forage> result) {
+        List<Forage> forageDates = findByDate(forage.getDate());
+        for (Forage f : forageDates) {
+            if (forage.getForager().equals(f.getForager()) && forage.getItem().equals(f.getItem()) && !f.getId().equals(forage.getId())) {
+                    result.addErrorMessage("Duplicate forage found.");
+                break;
+            }
+
+
+        }
+    }
+
+    public Map<Item, Double> weightByItem(LocalDate date) {
+        return findByDate(date).stream()
+                .collect(Collectors.groupingBy(Forage::getItem, Collectors.summingDouble(forage -> forage.getKilograms())));
     }
 }
