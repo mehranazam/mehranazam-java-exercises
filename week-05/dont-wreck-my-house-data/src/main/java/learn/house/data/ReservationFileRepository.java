@@ -53,7 +53,7 @@ public class ReservationFileRepository implements ReservationRepository{
     }
 
     @Override
-    public List<Reservation> findById(String id) throws DataException {
+    public Reservation findById(String id) throws DataException {
         List<Reservation> allReservations = findAll();
 
         return allReservations.stream()

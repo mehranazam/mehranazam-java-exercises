@@ -1,5 +1,6 @@
 package learn.house.ui;
 
+import learn.house.domain.ReservationResult;
 import learn.house.models.Guest;
 import learn.house.models.Host;
 import learn.house.models.Reservation;
@@ -115,6 +116,14 @@ public class View {
         return reservation;
     }
 
+    public Reservation changeReservation(Host host, Guest guest){
+
+    }
+
+    public Reservation cancelReservation(Host host, Guest guest){
+
+    }
+
     public void enterToContinue() {
         io.readString("Press [Enter] to continue.");
     }
@@ -153,4 +162,12 @@ public class View {
         return io.readRequiredString("Host last name starts with: ");
     }
 
+
+    public String getGuestEmailPrefix() {
+        return io.readRequiredString("Guest email address starts with: ");
+    }
+
+    public String getHostEmailPrefix() {
+        return io.readRequiredString("Host email address starts with: ");
+    }
 }

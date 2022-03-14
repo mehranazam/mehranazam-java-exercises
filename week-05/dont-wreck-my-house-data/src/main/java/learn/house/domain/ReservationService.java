@@ -54,7 +54,7 @@ public class ReservationService {
         Map<String, Host> hostMap = hostRepository.findAll().stream()
                 .collect(Collectors.toMap(i -> i.getId(), i -> i));
 
-        List<Reservation> result = reservationRepository.findById(id);
+        List<Reservation> result = (List<Reservation>) reservationRepository.findById(id);
         for(Reservation reservation : result){
             reservation.setGuest(guestMap.get(reservation.getGuest().getId()));
             reservation.setHost(hostMap.get(reservation.getHost().getId()));
@@ -78,6 +78,30 @@ public class ReservationService {
 
         return result;
     }
+
+    public ReservationResult<Reservation> edit(Reservation reservation) throws DataException {
+        ReservationResult<Reservation> result = validate(reservation);
+        if(!result.isSuccess()){
+            return result;
+        }
+
+        result.setPayload(reservationRepository.edit(reservation));
+
+        return result;
+    }
+
+
+    public ReservationResult<Reservation> delete(Reservation reservation) throws DataException {
+        ReservationResult<Reservation> result = validate(reservation);
+        if(!result.isSuccess()){
+            return result;
+        }
+
+        result.setPayload(reservationRepository.deleteById(reservation.getId()));
+
+        return result;
+    }
+
 
     public int generate(LocalDate startDate, LocalDate endDate, int count) throws DataException {
         if(startDate == null || endDate == null || startDate.isAfter(endDate) || count <= 0){
@@ -177,7 +201,7 @@ public class ReservationService {
 
     }
 
-    private void validateChildrenExist(Reservation reservation, ReservationResult<Reservation> result){
+    private void validateChildrenExist(Reservation reservation, ReservationResult<Reservation> result) throws DataException {
         if(reservation.getGuest().getId() == null
                 || guestRepository.findById(reservation.getGuest().getId()) == null){
             result.addErrorMessage("Guest does not exist.");

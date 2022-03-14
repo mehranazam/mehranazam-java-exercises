@@ -10,7 +10,7 @@ public interface ReservationRepository {
 
      //   List<Reservation> findAll() throws DataException;
 
-        List<Reservation> findById(String id) throws DataException;
+        Reservation findById(String id) throws DataException;
 
         boolean edit(Reservation editReservation) throws DataException;
 

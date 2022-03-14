@@ -56,7 +56,7 @@ public class Controller {
         }while(option != MainMenuOption.EXIT);
     }
 
-    private void editReservation() {
+    private void editReservation() throws DataException {
         view.displayHeader(MainMenuOption.EDIT_RESERVATION.getMessage());
         Host host = getHost();
         Guest guest = getGuest();
@@ -76,7 +76,7 @@ public class Controller {
         }
     }
 
-    private void deleteReservation() {
+    private void deleteReservation() throws DataException {
         view.displayHeader(MainMenuOption.CANCEL_RESERVATION.getMessage());
         Host host = getHost();
         Guest guest = getGuest();
@@ -121,14 +121,14 @@ public class Controller {
     }
 
     private Guest getGuest(){
-        String lastNamePrefix = view.getGuestNamePrefix();
-        List<Guest> guests = guestService.findByLastName(lastNamePrefix);
+        String emailPrefix = view.getGuestEmailPrefix();
+        List<Guest> guests = guestService.findByEmail(emailPrefix);
         return view.chooseGuest(guests);
     }
 
-    private Host getHost(){
-        String lastNamePrefix = view.getHostNamePrefix();
-        List<Host> hosts = hostService.findByLastName(lastNamePrefix);
+    private Host getHost() throws DataException {
+        String emailPrefix = view.getHostEmailPrefix();
+        List<Host> hosts = hostService.findByEmail(emailPrefix);
         return view.chooseHost(hosts);
     }
 
