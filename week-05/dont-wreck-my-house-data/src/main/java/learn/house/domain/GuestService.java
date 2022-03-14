@@ -1,5 +1,6 @@
 package learn.house.domain;
 
+import learn.house.data.DataException;
 import learn.house.data.GuestRepository;
 import learn.house.models.Guest;
 
@@ -14,11 +15,11 @@ public class GuestService {
         this.repository = repository;
     }
 
-    public List<Guest> findByEmail(String email){
+    public List<Guest> findByEmail(String email) throws DataException {
         return repository.findByEmail(email);
     }
 
-    public List<Guest> findByLastName(String prefix){
+    public List<Guest> findByLastName(String prefix) throws DataException {
         return repository.findAll().stream()
                 .filter(i -> i.getLastName().startsWith(prefix))
                 .collect(Collectors.toList());

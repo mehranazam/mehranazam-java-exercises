@@ -120,7 +120,7 @@ public class Controller {
 
     }
 
-    private Guest getGuest(){
+    private Guest getGuest() throws DataException {
         String emailPrefix = view.getGuestEmailPrefix();
         List<Guest> guests = guestService.findByEmail(emailPrefix);
         return view.chooseGuest(guests);
