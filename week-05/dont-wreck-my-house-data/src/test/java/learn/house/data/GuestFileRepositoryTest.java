@@ -10,13 +10,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class GuestFileRepositoryTest {
 
-    static final String SEED_FILE_PATH = "./reservations/reservation-seed";
+    static final String SEED_FILE_PATH = "./reservations/reservation-seed/";
     static final String TEST_FILE_PATH = "./reservations/reservation-test/";
 
 
@@ -46,11 +47,14 @@ class GuestFileRepositoryTest {
 //    void findById() {
 //    }
 
+    //guest_id,first_name,last_name,email,phone,state
     @Test
     void shouldFindAll() throws DataException {
-        GuestFileRepository repository = new GuestFileRepository("./guests.csv");
-        List<Guest> all = repository.findAll();
-        assertEquals(1, all.size());
+        List<Guest> expected = new ArrayList<>();
+        expected.add(new Guest());
+//        GuestFileRepository repository = new GuestFileRepository("./guests.csv");
+//        List<Guest> all = repository.findAll();
+//        assertEquals(1, all.size());
     }
 
     @Test
