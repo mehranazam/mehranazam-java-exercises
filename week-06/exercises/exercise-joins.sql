@@ -210,12 +210,13 @@ where pi.project_id = 481;
 
 -- Need help with this!
 /*
-select distinct c.*
+select *
 from customer c
-right outer join project p on p.customer_id = c.customer_id
-right outer join project_employee pe on pe.project_id = p.project_id
-inner join employee e on e.employee_id = pe.employee_id
-where c.postal_code = 'M3H' && e.first_name = 'Fleur' && e.last_name = 'Soyle';
+left join project p on p.customer_id = c.customer_id
+left join project_employee pe on pe.project_id = p.project_id and 
+pe.employee_id = (select employee_id from employee where first_name = 'Fleur')
+left join employee e on e.employee_id = pe.employee_id
+where c.postal_code = 'M3H';
 */
 
 -- Find customers without logins using a `right outer` join.
@@ -247,7 +248,7 @@ from category;
 -- name from unit
 -- for customers in the 'L3K' postal_code.
 -- Expected: 39 Rows
-
+/*
 -- Need help with this!
 select
 c.customer_id,
@@ -264,5 +265,5 @@ right outer join item i on i.item_id = pi.item_id
 right outer join unit u on u.unit_id = i.unit_id
 right outer join category ca on ca.category_id = i.category_id
 where c.postal_code = 'L3K';
-
+*/
 
