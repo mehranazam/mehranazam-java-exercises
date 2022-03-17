@@ -1,14 +1,15 @@
 package learn.house.domain;
 
-public class ReservationResult<T> extends ReservationResponse{
+public class ReservationResult<Reservation> extends ReservationResponse{
 
-    private T payload;
+    private Reservation payload;
 
-    public T getPayload(){
+    public Reservation getPayload(){
         return payload;
     }
 
-    public void setPayload(T payload){
+    public void setPayload(Reservation payload){
         this.payload = payload;
     }
 }
+

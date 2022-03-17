@@ -69,37 +69,17 @@ public class ReservationService {
 //    }
 
     public ReservationResult<Reservation> add(Reservation reservation) throws DataException {
-        ReservationResult<Reservation> result = validate(reservation);
-        if(!result.isSuccess()){
-            return result;
-        }
+        return reservationRepository.add(reservation);
 
-        result.setPayload(reservationRepository.add(reservation));
-
-        return result;
     }
 
     public ReservationResult<Reservation> edit(Reservation reservation) throws DataException {
-        ReservationResult<Reservation> result = validate(reservation);
-        if(!result.isSuccess()){
-            return result;
-        }
-
-        result.setPayload(reservationRepository.edit(reservation));
-
-        return result;
+        return reservationRepository.edit(reservation);
     }
 
 
     public ReservationResult<Reservation> delete(Reservation reservation) throws DataException {
-        ReservationResult<Reservation> result = validate(reservation);
-        if(!result.isSuccess()){
-            return result;
-        }
-
-        result.setPayload(reservationRepository.deleteById(reservation.getId()));
-
-        return result;
+        return reservationRepository.deleteById(reservation.getId());
     }
 
 

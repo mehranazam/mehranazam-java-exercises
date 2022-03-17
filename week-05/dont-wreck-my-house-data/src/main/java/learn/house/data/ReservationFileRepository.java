@@ -1,5 +1,6 @@
 package learn.house.data;
 
+import learn.house.domain.ReservationResult;
 import learn.house.models.Guest;
 import learn.house.models.Reservation;
 
@@ -26,12 +27,14 @@ public class ReservationFileRepository implements ReservationRepository{
 //    }
 
     @Override
-    public Reservation add(Reservation reservation) throws DataException {
+    public ReservationResult<Reservation> add(Reservation reservation) throws DataException {
         List<Reservation> all = findAll();
         reservation.getHost().setId(java.util.UUID.randomUUID().toString());
         all.add(reservation);
         writeAll(all, reservation.getId());
-        return reservation;
+        ReservationResult<Reservation> result = new ReservationResult<>();
+        result.setPayload(reservation);
+        return result;
     }
 
     private List<Reservation> findAll() throws DataException {
@@ -80,8 +83,8 @@ public class ReservationFileRepository implements ReservationRepository{
     }
 
     @Override
-    public boolean edit(Reservation editReservation) throws DataException {
-        boolean success = false;
+    public ReservationResult<Reservation> edit(Reservation editReservation) throws DataException {
+        ReservationResult<Reservation> success = new ReservationResult<>();
 
         List <Reservation> allReservations = findAll();
 
@@ -90,7 +93,7 @@ public class ReservationFileRepository implements ReservationRepository{
             if(toCheck.getId().equals(editReservation.getId())){
                 allReservations.set(i, editReservation);
                 writeAll(allReservations, editReservation.getId());
-                success = true;
+                success.setPayload(toCheck);
                 break;
             }
         }
@@ -137,16 +140,18 @@ public class ReservationFileRepository implements ReservationRepository{
 
 
     @Override
-    public boolean deleteById(String id) throws DataException {
+    public ReservationResult<Reservation> deleteById(String id) throws DataException {
+
+        ReservationResult<Reservation> success = new ReservationResult<>();
         List<Reservation> all = findAll();
         for(int i = 0; i < all.size(); i++){
             if(all.get(i).getId().equals(id)){
                 all.remove(i);
                 writeAll(all, id);
-                return true;
+               success.setPayload(all.get(i));
             }
         }
-        return false;
+       return success;
     }
 
     private String getFilePath(String id){

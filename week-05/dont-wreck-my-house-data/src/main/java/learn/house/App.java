@@ -18,7 +18,7 @@ public class App {
 
         ReservationFileRepository reservationFileRepository = new ReservationFileRepository("./reservations");
         GuestFileRepository guestFileRepository = new GuestFileRepository("./guests.csv");
-        HostFileRepository hostFileRepository = new HostFileRepository("./hosts.txt");
+        HostFileRepository hostFileRepository = new HostFileRepository("./hosts.csv");
 
         GuestService guestService = new GuestService(guestFileRepository);
         ReservationService reservationService = new ReservationService(reservationFileRepository, guestFileRepository, hostFileRepository);
