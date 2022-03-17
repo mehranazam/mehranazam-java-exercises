@@ -168,6 +168,10 @@ where email_address like '%.com';
 -- Which customers don't have a phone number?
 -- Expected: 68 Rows.
 /*
+update customer
+set phone = null
+where phone = '';
+
 select *
 from customer
 where phone = '';
@@ -289,3 +293,44 @@ employee_id = 15 ||
 employee_id = 22 ||
 employee_id = 23;
 */
+
+
+select *
+from customer
+inner join project
+on customer.customer_id = project.customer_id
+order by customer.customer_id;
+
+
+select *
+from customer
+cross join project
+order by customer.customer_id;
+
+
+
+select e.*
+from customer as c
+inner join project as p
+on c.customer_id = p.customer_id
+inner join project_employee as pe
+on p.project_id = pe.project_id
+inner join employee as e
+on pe.employee_id = e.employee_id
+where c.first_name = 'Tadeo' and c.last_name = 'Divine'
+order by c.customer_id;
+
+
+
+select count(*)
+from customer as c
+inner join project as p
+on c.customer_id = p.customer_id
+inner join project_employee as pe
+on p.project_id = pe.project_id
+inner join employee as e
+on pe.employee_id = e.employee_id
+where c.first_name = 'Tadeo' and c.last_name = 'Divine'
+order by c.customer_id;
+
+
