@@ -116,8 +116,11 @@ public class Controller {
         }
     }
 
-    private void viewReservationsByHost(){
-
+    private void viewReservationsByHost() throws DataException {
+        view.displayHeader(MainMenuOption.VIEW_RESERVATIONS_BY_HOST.getMessage());
+        String host = view.getHostEmailPrefix();
+        hostService.findByEmail(host);
+        view.enterToContinue();
     }
 
     private Guest getGuest() throws DataException {

@@ -5,6 +5,7 @@ import learn.house.models.Guest;
 import learn.house.models.Host;
 import learn.house.models.Reservation;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -117,11 +118,22 @@ public class View {
     }
 
     public Reservation changeReservation(Host host, Guest guest){
+        Reservation reservation = new Reservation();
 
+           String input = io.readRequiredString("Host email: ");
+            host.getEmailAddress();
+            if(input.trim().length() > 0){
+                reservation.setStartDate(io.readLocalDate("Reservation start date [MM/dd/yyyy]: "));
+                reservation.setEndDate(io.readLocalDate("Reservation end date [MM/dd/yyyy]: "));
+            }
+        return reservation;
     }
 
     public Reservation cancelReservation(Host host, Guest guest){
-
+        Reservation reservation = new Reservation();
+        String input = io.readRequiredString("Reservation to delete: ");
+        reservation.setId(input);
+                return reservation;
     }
 
     public void enterToContinue() {
