@@ -70,8 +70,10 @@ public class HostFileRepository implements HostRepository{
         result.setCity(fields[5]);
         result.setState(fields[6]);
         result.setPostalCode(Integer.parseInt(fields[7]));
-        result.setStandardRate(BigDecimal.valueOf(Integer.parseInt(fields[8])));
-        result.setWeekendRate(BigDecimal.valueOf(Integer.parseInt(fields[9])));
+        double standardPrice = Double.parseDouble(fields[8]);
+        result.setStandardRate(BigDecimal.valueOf(standardPrice));
+        double weekendPrice = Double.parseDouble(fields[9]);
+        result.setWeekendRate(BigDecimal.valueOf(weekendPrice));
         return result;
     }
 }
