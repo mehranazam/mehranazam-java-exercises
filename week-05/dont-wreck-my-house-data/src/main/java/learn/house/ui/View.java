@@ -29,7 +29,7 @@ public class View {
             max = Math.max(max, option.getValue());
         }
 
-        String message = String.format("Select [%s-%s]: ", min, (max - 1));
+        String message = String.format("Select [%s-%s]: ", min, (max));
         return MainMenuOption.fromValue(io.readInt(message, min, max));
     }
 
@@ -112,6 +112,7 @@ public class View {
     public Reservation makeReservation(Host host){
         Reservation reservation = new Reservation();
         reservation.setHost(host);
+        makeGuest();
         reservation.setStartDate(io.readLocalDate("Reservation start date [MM/dd/yyyy]: "));
         reservation.setEndDate(io.readLocalDate("Reservation end date [MM/dd/yyyy]: "));
         return reservation;
@@ -163,6 +164,10 @@ public class View {
         guest.setLastName(io.readRequiredString("Last name of guest: "));
         guest.setEmailAddress(io.readRequiredString("Email address of guest: "));
         return guest;
+
+    }
+
+    public void displayCost(){
 
     }
 

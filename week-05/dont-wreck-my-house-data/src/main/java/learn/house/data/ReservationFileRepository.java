@@ -37,7 +37,8 @@ public class ReservationFileRepository implements ReservationRepository{
         return result;
     }
 
-    private List<Reservation> findAll() throws DataException {
+    @Override
+    public List<Reservation> findAll() throws DataException {
 
         ArrayList<Reservation> result = new ArrayList<>();
 

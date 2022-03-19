@@ -1,6 +1,7 @@
 package learn.house.data;
 
 import learn.house.models.Host;
+import learn.house.models.Reservation;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -17,6 +18,8 @@ public class HostFileRepository implements HostRepository{
     private static final String DELIMITER = ",";
     private static final String DELIMITER_REPLACEMENT = "@@@";
     private static final String HEADER = "id,last_name,email,phone,address,city,state,postal_code,standard_rate,weekend_rate";
+
+
 
     public HostFileRepository(String filePath) {
         this.filePath = filePath;

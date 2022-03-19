@@ -1,6 +1,7 @@
 package learn.house.data;
 
 import learn.house.models.Host;
+import learn.house.models.Reservation;
 
 import java.util.List;
 

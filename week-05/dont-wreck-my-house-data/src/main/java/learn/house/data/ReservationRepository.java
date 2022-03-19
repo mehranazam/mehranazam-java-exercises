@@ -3,11 +3,13 @@ package learn.house.data;
 import learn.house.domain.ReservationResult;
 import learn.house.models.Reservation;
 
+import java.util.List;
+
 public interface ReservationRepository {
 
         ReservationResult<Reservation> add(Reservation reservation) throws DataException;
 
-     //   List<Reservation> findAll() throws DataException;
+        List<Reservation> findAll() throws DataException;
 
         Reservation findById(String id) throws DataException;
 
