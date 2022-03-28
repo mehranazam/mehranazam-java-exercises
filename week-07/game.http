@@ -1,0 +1,20 @@
+GET http://localhost:8080/api/scissors HTTP/1.1
+
+###
+
+GET http://localhost:8080/api/rock HTTP/1.1
+
+###
+
+GET http://localhost:8080/api/paper HTTP/1.1
+
+
+###
+
+POST http://localhost:8080/api/guess HTTP/1.1
+Content-Type: application/json
+
+{
+
+  "whateverYouWant":"rock"
+}

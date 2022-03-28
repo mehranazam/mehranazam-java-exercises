@@ -8,6 +8,15 @@ public class Student {
     String lastName;
 
     List<Student> students;
+    List<Grade> grades;
+
+    public List<Grade> getGrades() {
+        return grades;
+    }
+
+    public void setGrades(List<Grade> grades) {
+        this.grades = grades;
+    }
 
     public List<Student> getStudents() {
         return students;

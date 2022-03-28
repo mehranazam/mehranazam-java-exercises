@@ -1,0 +1,14 @@
+GET http://localhost:8080/api/student/A
+
+#############################################
+
+
+GET http://localhost:8080/api/student/B
+
+#############################################
+
+GET http://localhost:8080/api/student/C
+
+#############################################
+
+GET http://localhost:8080/api/student/%

@@ -6,6 +6,8 @@ import javax.sql.DataSource;
 
 // NEW: required imports
 import learn.pets.models.Pet;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -13,7 +15,8 @@ import java.util.List;
 
 // NEW: required imports
 
-
+@Repository
+@Profile("jdbc")
 public class PetJdbcRepository implements PetRepository {
 
     // 1. Dangerous initialization during construction

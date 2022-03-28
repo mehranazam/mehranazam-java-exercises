@@ -4,6 +4,7 @@ import learn.solarfarm.models.SolarPanel;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.awt.*;
 import java.util.List;
 
 @Repository

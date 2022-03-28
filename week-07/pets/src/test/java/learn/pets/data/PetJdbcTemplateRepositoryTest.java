@@ -2,7 +2,10 @@ package learn.pets.data;
 
 import learn.pets.models.Pet;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -11,31 +14,49 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+// 1. SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
 class PetJdbcTemplateRepositoryTest {
 
+    // 2. Let Spring inject auto-configured dependencies.
+    @Autowired
     PetJdbcTemplateRepository repository;
 
-    public PetJdbcTemplateRepositoryTest() {
-        ApplicationContext context = new AnnotationConfigApplicationContext(DbTestConfig.class);
-        repository = context.getBean(PetJdbcTemplateRepository.class);
+    @Autowired
+    JdbcTemplate jdbcTemplate;
+
+    // 3. @BeforeAll work-around.
+    static boolean hasSetUp = false;
+
+    @BeforeEach
+    void setup() {
+        if (!hasSetUp) {
+            hasSetUp = true;
+            jdbcTemplate.update("call set_known_good_state();");
+        }
     }
 
-    @BeforeAll
-    static void oneTimeSetup() {
-        ApplicationContext context = new AnnotationConfigApplicationContext(DbTestConfig.class);
-        JdbcTemplate jdbcTemplate = context.getBean(JdbcTemplate.class);
-        jdbcTemplate.update("call set_known_good_state();");
-    }
-
-
-    /*
-    Overall Test Strategy:
-    - Leave pet_id 1 alone.
-    - Update pet_id 2.
-    - Delete pet_id 3.
-    Therefore, can't depend on pet 2 to remain the same and can't depend on pet 3 to exist.
-    Also can't count pets because a pet may be added at any time.
-     */
+//    public PetJdbcTemplateRepositoryTest() {
+//        ApplicationContext context = new AnnotationConfigApplicationContext(DbTestConfig.class);
+//        repository = context.getBean(PetJdbcTemplateRepository.class);
+//    }
+//
+//    @BeforeAll
+//    static void oneTimeSetup() {
+//        ApplicationContext context = new AnnotationConfigApplicationContext(DbTestConfig.class);
+//        JdbcTemplate jdbcTemplate = context.getBean(JdbcTemplate.class);
+//        jdbcTemplate.update("call set_known_good_state();");
+//    }
+//
+//
+//    /*
+//    Overall Test Strategy:
+//    - Leave pet_id 1 alone.
+//    - Update pet_id 2.
+//    - Delete pet_id 3.
+//    Therefore, can't depend on pet 2 to remain the same and can't depend on pet 3 to exist.
+//    Also can't count pets because a pet may be added at any time.
+//     */
 
     @Test
     void shouldFindAll() {

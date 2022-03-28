@@ -1,6 +1,7 @@
 package learn.pets.data;
 
 import learn.pets.models.Pet;
+import org.springframework.context.annotation.Profile;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -14,6 +15,7 @@ import java.util.List;
 
 
 @Repository
+@Profile("jdbc-template")
 public class PetJdbcTemplateRepository implements PetRepository {
 
     private final JdbcTemplate jdbcTemplate;
@@ -92,7 +94,7 @@ public class PetJdbcTemplateRepository implements PetRepository {
     @Override
     public boolean update(Pet pet) {
         final String sql = "update pet set "
-                + "`name` = ?, "
+                + "`name` = ? "
                 + "`type` = ? "
                 + "where pet_id = ?;";
 
