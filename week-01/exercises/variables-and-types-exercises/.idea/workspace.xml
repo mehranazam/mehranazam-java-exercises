@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e020970f-5087-47be-a162-0e845dff0882" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../arrays-exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../arrays-exercises/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../decisions-exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../decisions-exercises/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../repetition-exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../repetition-exercises/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise15.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise15.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise25.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise25.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
