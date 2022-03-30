@@ -1,3 +1,12 @@
-h1 {
-  color: #ff00ff;
+button {
+  font-size: 100px;
+  font-family: "Times New Roman";
+  padding: 50px;
+}
+
+.centered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
