@@ -29,7 +29,7 @@ function Agents() {
 
   return (
     <>
-      <AddAgent />
+      <AddAgent agents={AddAgent} />
       <button onClick={fetchAgents}>Retrieve Agents</button>
       {AgentFactory()}
     </>

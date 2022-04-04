@@ -27,6 +27,10 @@ function AddAgent() {
     setHeightInInches(parseInt(e.target.value));
   }
 
+  function addNewAgentToState(newAgentObject) {
+    props.setAgents([...props.agents, newAgentObject]);
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
     const newAgent = {
@@ -44,7 +48,11 @@ function AddAgent() {
       },
       body: JSON.stringify(newAgent),
     })
-      .then((response) => console.log("Success! ", response))
+      .then((response) => {
+        alert(response.statusText + " agent!");
+        return response.json();
+      })
+      .then((newAgentObj) => addNewAgentToState(newAgentObj))
       .catch((rejection) => console.log("Failure! ", rejection));
   }
 

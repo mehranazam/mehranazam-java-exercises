@@ -1,8 +1,25 @@
 import Form from "./Form";
 
 function Agent(props) {
-  const { firstName, lastName, middleName, dob, heightInInches } =
+  const { agentId, firstName, lastName, middleName, dob, heightInInches } =
     props.agentObj;
+
+  function removeAgentFromState() {
+    props.setAgents(
+      [...props.agents].filter((agent) => agent.agentId !== agentId)
+    );
+  }
+
+  function handleDeleteAgent() {
+    fetch("http://localhost:8080/api/agent" + agentId, {
+      method: "DELETE",
+    })
+      .then((response) => {
+        console.log(response);
+        removeAgentFromState();
+      })
+      .catch((rejection) => console.log(rejection));
+  }
 
   return (
     <div className="agent-card">
@@ -26,7 +43,7 @@ function Agent(props) {
         agents={props.agents}
         setAgents={props.setAgents}
       />
-      <button onClick={() => props.deleteAgent(props.id)}>X</button>
+      <button onClick={() => props.handleDeleteAgent()}>X</button>
     </div>
   );
 }

@@ -7,6 +7,14 @@ function Form(props) {
   const [dob, setDOB] = useState("");
   const [height, setHeight] = useState("");
 
+  function editFormShow() {
+    let editForm = document.querySelector("edit-form");
+    if (editForm.classList.contains("hidden")) {
+      editForm.classList.remove("hidden");
+    } else {
+      editForm.classList.add("hidden");
+    }
+  }
   function handleFirstNameChange(event) {
     setFirstName(event.target.value);
   }
@@ -56,41 +64,45 @@ function Form(props) {
           : alert("Something went wrong!" + response)
       )
       .catch((rejection) => alert(rejection));
+    editFormShow();
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label for="first-name">First Name:</label>
-      <br />
-      <br />
-      <input onChange={handleFirstNameChange} id="first-name"></input>
-      <br />
-
-      <label for="middle-name">Middle Initial:</label>
-      <br />
-      <br />
-      <input onChange={handleMiddleNameChange} id="middle-name"></input>
-      <br />
-
-      <label for="last-name">Last Name:</label>
-      <br />
-      <br />
-      <input onChange={handleLastNameChange} id="last-name"></input>
-      <br />
-
-      <label for="dob">First Name:</label>
-      <br />
-      <br />
-      <input onChange={handleDOBChange} id="dob"></input>
-      <br />
-
-      <label for="height">First Name:</label>
-      <br />
-      <br />
-      <input onChange={handleHeightChange} id="height"></input>
-      <br />
-      <button>Submit</button>
-    </form>
+    <>
+      <form id="edit-form" className="hidden" onSubmit={handleSubmit}>
+        <label for="first-name">First Name:</label>
+        <br />
+        <br />
+        <input onChange={handleFirstNameChange} id="first-name"></input>
+        <br />
+        <br />
+        <label for="middle-name">Middle Initial:</label>
+        <br />
+        <br />
+        <input onChange={handleMiddleNameChange} id="middle-name"></input>
+        <br />
+        <br />
+        <label for="last-name">Last Name:</label>
+        <br />
+        <br />
+        <input onChange={handleLastNameChange} id="last-name"></input>
+        <br />
+        <br />
+        <label for="dob">DOB:</label>
+        <br />
+        <br />
+        <input onChange={handleDOBChange} id="dob"></input>
+        <br />
+        <br />
+        <label for="height">Height:</label>
+        <br />
+        <br />
+        <input onChange={handleHeightChange} id="height"></input>
+        <br />
+        <button>Submit</button>
+      </form>
+      <button onClick={editFormShow}>Edit</button>
+    </>
   );
 }
 
