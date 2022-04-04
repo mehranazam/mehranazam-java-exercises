@@ -2,10 +2,29 @@ import { useState } from "react";
 
 function Form(props) {
   const [firstName, setFirstName] = useState("");
-  const [lastName, setlastName] = useState("");
+  const [middleName, setMiddleName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [dob, setDOB] = useState("");
+  const [height, setHeight] = useState("");
 
   function handleFirstNameChange(event) {
     setFirstName(event.target.value);
+  }
+
+  function handleMiddleNameChange(event) {
+    setMiddleName(event.target.value);
+  }
+
+  function handleLastNameChange(event) {
+    setLastName(event.target.value);
+  }
+
+  function handleDOBChange(event) {
+    setDOB(event.target.value);
+  }
+
+  function handleHeightChange(event) {
+    setHeight(event.target.value);
   }
 
   function replaceAgent(agentObj) {
@@ -19,6 +38,10 @@ function Form(props) {
     e.preventDefault();
     let agentCopy = { ...props.agentObj };
     agentCopy.firstName = firstName;
+    agentCopy.middleName = middleName;
+    agentCopy.lastName = lastName;
+    agentCopy.dob = dob;
+    agentCopy.height = height;
 
     fetch("http://localhost:8080/api/agent/" + agentCopy.agentId, {
       method: "PUT",
@@ -41,6 +64,30 @@ function Form(props) {
       <br />
       <br />
       <input onChange={handleFirstNameChange} id="first-name"></input>
+      <br />
+
+      <label for="middle-name">Middle Initial:</label>
+      <br />
+      <br />
+      <input onChange={handleMiddleNameChange} id="middle-name"></input>
+      <br />
+
+      <label for="last-name">Last Name:</label>
+      <br />
+      <br />
+      <input onChange={handleLastNameChange} id="last-name"></input>
+      <br />
+
+      <label for="dob">First Name:</label>
+      <br />
+      <br />
+      <input onChange={handleDOBChange} id="dob"></input>
+      <br />
+
+      <label for="height">First Name:</label>
+      <br />
+      <br />
+      <input onChange={handleHeightChange} id="height"></input>
       <br />
       <button>Submit</button>
     </form>

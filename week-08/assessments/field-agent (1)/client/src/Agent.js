@@ -26,6 +26,7 @@ function Agent(props) {
         agents={props.agents}
         setAgents={props.setAgents}
       />
+      <button onClick={() => props.deleteAgent(props.id)}>X</button>
     </div>
   );
 }
