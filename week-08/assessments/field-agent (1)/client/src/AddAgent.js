@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function AddAgent() {
   const [firstName, setFirstName] = useState("");
@@ -6,6 +7,8 @@ function AddAgent() {
   const [lastName, setLastName] = useState("");
   const [dob, setDOB] = useState("");
   const [heightInInches, setHeightInInches] = useState(0);
+
+  let navigate = useNavigate();
 
   function handleFirstName(e) {
     setFirstName(e.target.value);
@@ -50,7 +53,7 @@ function AddAgent() {
     })
       .then((response) => {
         alert(response.statusText + " agent!");
-        return response.json();
+        navigate("/agents");
       })
       .then((newAgentObj) => addNewAgentToState(newAgentObj))
       .catch((rejection) => console.log("Failure! ", rejection));

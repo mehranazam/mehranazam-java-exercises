@@ -8,7 +8,7 @@ function Form(props) {
   const [height, setHeight] = useState("");
 
   function editFormShow() {
-    let editForm = document.querySelector("edit-form");
+    let editForm = document.querySelector("#edit-form");
     if (editForm.classList.contains("hidden")) {
       editForm.classList.remove("hidden");
     } else {
