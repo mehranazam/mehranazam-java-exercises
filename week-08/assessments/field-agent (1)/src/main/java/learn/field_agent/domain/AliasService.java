@@ -2,6 +2,7 @@ package learn.field_agent.domain;
 
 import learn.field_agent.data.AgentRepository;
 import learn.field_agent.data.AliasRepository;
+import learn.field_agent.models.Agent;
 import learn.field_agent.models.Alias;
 import org.springframework.stereotype.Service;
 
@@ -76,6 +77,7 @@ public class AliasService {
 
         if(Validations.isNullOrBlank(alias.getName())){
             result.addMessage("name is required", ResultType.INVALID);
+            return result;
         }
 
 
@@ -83,14 +85,25 @@ public class AliasService {
         if(matchingName.size() > 0){
             if(Validations.isNullOrBlank(alias.getPersona())){
                 result.addMessage("Cannot add alias with duplicate name without persona", ResultType.INVALID);
+                return result;
             }
 
             boolean anyAlreadyHavePersona = matchingName.stream().anyMatch(
-                    a -> a.getPersona().equals(alias.getPersona())
+                    a -> alias.getPersona().equals(a.getPersona())
             );
+            if(anyAlreadyHavePersona){
+                result.addMessage("Aliases with duplicate names must have unique personas.",
+                        ResultType.INVALID);
+                return result;
+            }
         }
 
+        Agent matchingAgent = agentRepository.findById(alias.getAgentId());
 
+        if( matchingAgent == null ){
+            result.addMessage( "Invalid agent id.", ResultType.INVALID );
+            return result;
+        }
 
 
         return result;
