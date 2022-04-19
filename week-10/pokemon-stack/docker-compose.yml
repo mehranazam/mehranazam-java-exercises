@@ -1,0 +1,26 @@
+services:
+
+  db:
+    build: ./db
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+
+  api:
+    build: ./api
+    environment:
+      - DB_URL=${DB_URL}
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+    restart: on-failure:3
+
+  ui:
+    build: ./ui
+    ports:
+      - 3000:80
+    depends_on:
+      - db
+      - api

@@ -1,0 +1,9 @@
+# just in case
+.git
+# IntelliJ
+.idea
+# NEW: Maven output
+target
+
+# Docker artifacts
+Dockerfile*
